@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Candour -->
+<window id="0">
+	<defaultcontrol>3000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalBackground</include>
+		<include>Topbar</include>
+	<!-- Bottom Bar -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>1014</posy>
+			<width>FullScreenWidth</width>
+			<height>66</height>
+			<texture border="1">bottombar.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3000" description="homelist">
+			<posx>200</posx>
+			<posy>90</posy>
+			<width>250</width>
+			<height>966</height>
+	      	<scrolltime>200</scrolltime>
+	      	<visible>true</visible>
+          	<itemgap>25</itemgap>
+	      	<control type="button" id="3100" description="Home">
+            	<width>322</width>
+            	<include>HomeLabel</include>
+				<font>font48_bold</font>
+				<label>Home</label>
+            	<onclick>ActivateWindow(Video,movietitles,return)</onclick>
+				<onleft>3110</onleft>
+				<onright>3121</onright>
+          	</control>
+	      	<control type="button" id="3200" description="Movies">
+				<width>322</width>
+				<include>HomeLabel</include>
+				<font>font48_bold</font>
+            	<label>Movies</label>
+            	<onclick>ActivateWindow(Video,movietitles,return)</onclick>
+				<onleft>3210</onleft>
+				<onright>3221</onright>
+            </control>
+			<control type="button" id="3300" description="TV Shows">
+				<width>322</width>
+				<include>HomeLabel</include>
+            	<font>font48_bold</font>
+            	<label>TV Shows</label>
+            	<onclick>ActivateWindow(Video,tvshowtitles,return)</onclick>
+				<onleft>3310</onleft>
+				<onright>3321</onright>
+			</control>
+			<control type="button" id="3400" description="KidsTV">
+				<width>322</width>
+				<include>HomeLabel</include>
+            	<font>font48_bold</font>
+            	<label>KidsTV</label>
+            	<onclick>ActivateWindow(Videos,special://skin/extras/playlists/KidsTVShows.xsp,return)></onclick>
+				<onleft>3410</onleft>
+				<onright>3421</onright>
+			</control>
+			<control type="button" id="3500" description="KidsMovies">
+				<width>322</width>
+				<include>HomeLabel</include>
+            	<font>font48_bold</font>
+            	<label>KidsMovies</label>
+            	<onclick>ActivateWindow(Videos,special://skin/extras/playlists/KidsMovies.xsp,return)</onclick>
+				<onleft>3510</onleft>
+				<onright>3521</onright>
+			</control>
+			<control type="button" id="3600" description="Channels">
+				<width>322</width>
+				<include>HomeLabel</include>
+            	<font>font48_bold</font>
+            	<label>Channels</label>
+            	<onclick>ActivateWindow(favourites,return)</onclick>
+				<onright>3631</onright>
+			</control>
+			<control type="button" id="3700" description="Music">
+				<width>322</width>
+				<include>HomeLabel</include>
+            	<!--<visible>Library.HasContent(music)</visible>-->
+				<font>font48_bold</font>
+            	<label>Music</label>
+            	<onclick>ActivateWindow(music,return)</onclick>
+			</control>
+			<control type="button" id="3800" description="Pictures">
+				<width>322</width> 
+				<include>HomeLabel</include> 
+				<font>font48_bold</font> 
+				<label>Pictures</label> 
+				<onclick>ActivateWindow(pictures,return)</onclick> 
+				<onleft>3810</onleft>
+			</control>			
+			<control type="button" id="3900" description="Settings">
+				<width>322</width>
+				<include>HomeLabel</include>
+            	<font>font48_bold</font>
+            	<label>Settings</label>
+            	<onclick>ActivateWindow(settings,return)</onclick>
+				<onleft>3910</onleft>
+			</control>
+		</control>
+
+<!-- Home -->
+
+		<include>HomeLeftMenu</include>
+		
+		<control type="image" id="3105" description="homeleftarrow">
+			<visible>Control.HasFocus(3100) | ControlGroup(3110).HasFocus()</visible>
+			<posx>185</posx>
+			<posy>105</posy>
+			<width>16</width>
+			<height>30</height>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>themecolor</colordiffuse>
+			<texture border="1">arrowleft.png</texture>
+		</control>
+
+<!-- Home Sub Menu #1-->
+		
+		<control type="button" id="3121" description="HomeSub1Label">
+			<posx>475</posx>
+			<posy>190</posy>
+			<width>500</width>
+			<height>325</height>
+			<include>HomeVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<label>New DVD Releases</label>
+			<angle>90</angle>
+			<onup>3123</onup>
+			<ondown>3122</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3131,0)</onright>
+			<onclick>ActivateWindow(Videos,plugin://script.extendedinfo?info=newdvdmovies,return)</onclick>
+			<!--<onclick>ActivateWindow(Videos,special://skin/extras/playlists/InProgressMovies.xsp,return)</onclick>-->
+		</control>
+			
+		<control type="list" id="3131" description="HomeSub1">
+			<include>subfade1</include>
+			<posx>510</posx>
+			<posy>60</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3133,$INFO[Container(3131).Position])</onup>
+			<ondown>Control.SetFocus(3132,$INFO[Container(3131).Position])</ondown>
+			<onleft>3121</onleft>
+			<onright>3131</onright>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>HomeVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3131)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3131)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content limit="10" target="video">plugin://script.extendedinfo?info=newdvdmovies</content>
+		</control>		
+		
+<!-- Home Sub Menu #2-->
+		
+		<control type="button" id="3122" description="HomeSub2Label">
+			<posx>475</posx>
+			<posy>515</posy>
+			<width>500</width>
+			<height>325</height>
+			<include>HomeVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<label>Trending Now</label>
+			<angle>90</angle>
+			<onup>3121</onup>
+			<ondown>3123</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3132,0)</onright>
+			<onclick>ActivateWindow(Videos,plugin://script.extendedinfo?info=popularmovies,return)</onclick>
+		</control>		
+
+		<control type="list" id="3132" description="HomeSub2">
+			<include>subfade2</include>
+			<posx>510</posx>
+			<posy>390</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3131,$INFO[Container(3132).Position])</onup>
+			<ondown>Control.SetFocus(3133,$INFO[Container(3132).Position])</ondown>
+			<onleft>3122</onleft>
+			<onright>3132</onright>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>HomeVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3132)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3132)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content limit="10" target="video">plugin://script.extendedinfo?info=popularmovies</content>
+		</control>
+
+<!-- Home Sub Menu #3-->
+		
+		<control type="button" id="3123" description="HomeSub3Label">
+			<posx>475</posx>
+			<posy>840</posy>
+			<width>500</width>
+			<height>325</height>
+			<include>HomeVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<label>Now Playing in Theatres</label>
+			<angle>90</angle>
+			<onup>3122</onup>
+			<ondown>3121</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3131,0)</onright>
+			<onclick>ActivateWindow(Videos,plugin://script.extendedinfo?info=incinemasmovies,return)</onclick>
+		</control>		
+
+		<control type="list" id="3133" description="HomeSub3">
+			<include>subfade2</include>
+			<posx>510</posx>
+			<posy>720</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3132,$INFO[Container(3133).Position])</onup>
+			<ondown>Control.SetFocus(3131,$INFO[Container(3133).Position])</ondown>
+			<onleft>3123</onleft>
+			<onright>3133</onright>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>HomeVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3133)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3133)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<!--<content limit="10" target="video">plugin://script.extendedinfo?info=incinemamovies</content>-->
+		</control>			
+		
+<!--  Movies  -->	
+	
+		<include>MovieLeftMenu</include>
+		
+		<control type="image" id="3205" description="movieleftarrow">
+			<include>MovieVis</include>
+			<posx>185</posx>
+			<posy>190</posy>
+			<width>16</width>
+			<height>30</height>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>themecolor</colordiffuse>
+			<texture border="1">arrowleft.png</texture>
+		</control>
+		
+<!--  Movie Submenu #1  -->
+		
+		<control type="button" id="3221" description="MoviesSub1Label">
+			<posx>475</posx>
+			<posy>190</posy>
+			<width>500</width>
+			<height>325</height>
+			<include>MovieVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<!--<label>In Progress Movies</label>-->
+			<label>$INFO[Container(4002).ListItemPosition(1).label]</label>
+			<angle>90</angle>
+			<onup>3223</onup>
+			<ondown>3222</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3231,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/InProgressMovies.xsp,return)</onclick>
+			<!--<onclick>ActivateWindow(Videos,plugin://script.skin.helper.service/?action=similarmovies&amp;imdbid=$INFO[Container(3291).ListItemAbsolute(4).IMDBNumber]&amp;limit=14&amp;reload=$INFO[Window(Home).Property(widgetreload)],return)</onclick>-->
+		</control>	
+		
+		<control type="list" id="4002" description="RecentMoviesDummy">
+			<onfocus>Control.SetFocus(3000,0)</onfocus>
+			<visible allowhiddenfocus="true">false</visible>
+			<itemlayout></itemlayout>
+			<content limit="10" target="video">special://skin/extras/playlists/RecentlyWatchedMovies.xsp</content>
+		</control>
+		
+		<control type="list" id="3231" description="MoviesSub1">
+			<include>subfade1</include>
+			<posx>510</posx>
+			<posy>60</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3233,$INFO[Container(3231).Position])</onup>
+			<ondown>Control.SetFocus(3232,$INFO[Container(3231).Position])</ondown>
+			<onleft>3221</onleft>
+			<onright>3231</onright>
+			<!--<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>-->
+			<!--<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>-->
+			<!--<onclick>PlayMedia($INFO[Container(4002).ListItemAbsolute(1).FileNameAndPath])</onclick>-->
+			<onclick>Notification(Addon Required,$INFO[Container(4002).ListItemPosition(1).label])</onclick>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>MovieVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3231)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3231)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<!--<content limit="10">$INFO[ActivateWindow(Videos,special://skin/extras/playlists/InProgressMovies.xsp,return)]</content>-->
+			<!--<content limit="10" target="video">plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[Container(4002).ListItem(0).DBID]</content>-->
+			<content limit="10" target="video">plugin://script.skin.helper.service/?action=similarmovies&amp;imdbid=$INFO[Container(4002).ListItemAbsolute(1).IMDBNumber]&amp;limit=14&amp;reload=$INFO[Window(Home).Property(widgetreload)]</content>
+		</control>
+		
+<!--  Movie Submenu #2  -->
+
+		<control type="button" id="3222" description="MoviesSub2Label">
+			<posx>475</posx>
+			<posy>515</posy>
+			<width>500</width>
+			<height>325</height>
+			<align>left</align>
+			<include>MovieVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<angle>90</angle>
+			<label>Recently Added Movies</label>
+			<onup>3221</onup>
+			<ondown>3223</ondown>
+			<onleft>3000</onleft>
+			<onright>3232</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/RecentlyAddedMovies.xsp,return)</onclick>
+		</control>
+		
+		<control type="list" id="3232" description="MovieSub2">
+			<include>subfade2</include>
+			<posx>510</posx>
+			<posy>390</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3231,$INFO[Container(3232).Position])</onup>
+			<ondown>Control.SetFocus(3233,$INFO[Container(3232).Position])</ondown>
+			<onleft>3222</onleft>
+			<onright>3232</onright>
+			<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>
+			<oninfo>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(3232).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>MovieVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3232)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3232)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content target="video" limit="10">special://skin/extras/playlists/RecentlyAddedMovies.xsp</content>
+		</control>
+		
+<!--  Movie Submenu #3  -->
+
+		<control type="button" id="3223" description="MoviesSub3Label">
+			<posx>475</posx>
+			<posy>840</posy>
+			<width>400</width>
+			<height>325</height>
+			<align>left</align>
+			<include>MovieVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<angle>90</angle>
+			<label>Random Movies</label>
+			<onup>3222</onup>
+			<ondown>3221</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3233,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/RandomMovies.xsp,return)</onclick>
+		</control>
+		
+		<control type="list" id="3233" description="MoviesSub3">
+			<include>subfade3</include>
+			<posx>510</posx>
+			<posy>720</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3232,$INFO[Container(3233).Position])</onup>
+			<ondown>Control.SetFocus(3231,$INFO[Container(3233).Position])</ondown>
+			<onleft>3223</onleft>
+			<onright>3233</onright>
+			<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>
+			<oninfo>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(3233).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>MovieVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3233)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3233)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content limit="10" target="video">special://skin/extras/playlists/RandomMovies.xsp</content>
+		</control>
+
+<!--  TV Shows  -->	
+	
+		<include>TVLeftMenu</include>
+		
+		<control type="image" id="3305" description="TVleftarrow">
+			<include>TVVis</include>
+			<posx>185</posx>
+			<posy>275</posy>
+			<width>16</width>
+			<height>30</height>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>themecolor</colordiffuse>
+			<texture border="1">arrowleft.png</texture>
+		</control>
+
+<!--  TV Shows Submenu #1  -->		
+
+		<control type="button" id="3321" description="TVSub1Label">
+			<posx>475</posx>
+			<posy>180</posy>
+			<width>500</width>
+			<height>325</height>
+			<align>left</align>
+			<include>TVVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<label>In Progress Shows</label>
+			<angle>90</angle>
+			<onup>3323</onup>
+			<ondown>3322</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3331,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/InProgressTVShows.xsp,return)</onclick>
+		</control>	
+		
+		<control type="list" id="3331" description="TVSub1">
+			<include>subfade1</include>
+			<posx>510</posx>
+			<posy>60</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3333,$INFO[Container(3331).Position])</onup>
+			<ondown>Control.SetFocus(3332,$INFO[Container(3331).Position])</ondown>
+			<onleft>3321</onleft>
+			<onright>3331</onright>
+			<!--<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>-->
+			<oninfo>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(3331).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>TVVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3331)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3331)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content target="video" limit="10">special://skin/extras/playlists/InProgressTVShows.xsp</content>
+		</control>
+
+<!-- TV Submenu #2 -->
+		
+		<control type="button" id="3322" description="TVSub2Label">
+			<posx>475</posx>
+			<posy>515</posy>
+			<width>500</width>
+			<height>325</height>
+			<align>left</align>
+			<include>TVVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<angle>90</angle>
+			<label>Recently Updated Shows</label>
+			<onup>3321</onup>
+			<ondown>3323</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3332,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/RecentlyUpdatedTVShows.xsp,return)</onclick>
+		</control>
+		
+		<control type="list" id="3332" description="TVSub2">
+			<include>subfade2</include>
+			<posx>510</posx>
+			<posy>390</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3331,$INFO[Container(3332).Position])</onup>
+			<ondown>Control.SetFocus(3333,$INFO[Container(3332).Position])</ondown>
+			<onleft>3322</onleft>
+			<onright>3332</onright>
+			<!--<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>-->
+			<oninfo>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(3332).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>TVVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3332)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3332)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content target="video" limit="10">special://skin/extras/playlists/RecentlyUpdatedTVShows.xsp</content>
+		</control>
+
+<!-- TV Submenu #3 -->
+		
+		<control type="button" id="3323" description="TVSub3Label">
+			<posx>475</posx>
+			<posy>840</posy>
+			<width>500</width>
+			<height>325</height>
+			<align>left</align>
+			<include>TVVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<angle>90</angle>
+			<label>Random TV Shows</label>
+			<onup>3322</onup>
+			<ondown>3321</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3333,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/RandomTVShows.xsp,return)</onclick>
+		</control>
+		
+		<control type="list" id="3333" description="TVSub3">
+			<include>subfade3</include>
+			<posx>510</posx>
+			<posy>720</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3332,$INFO[Container(3333).Position])</onup>
+			<ondown>Control.SetFocus(3331,$INFO[Container(3333).Position])</ondown>
+			<onleft>3323</onleft>
+			<onright>3333</onright>
+			<!--<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedtvinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>-->
+			<oninfo>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(3333).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>TVVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3333)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3333)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content target="video" limit="10">special://skin/extras/playlists/RandomTVShows.xsp</content>
+		</control>		
+
+<!--  KidsTV Shows  -->	
+	
+		<control type="image" id="3405" description="TVleftarrow">
+			<include>KidsTVVis</include>
+			<posx>185</posx>
+			<posy>360</posy>
+			<width>16</width>
+			<height>30</height>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>themecolor</colordiffuse>
+			<texture border="1">arrowleft.png</texture>
+		</control>
+	
+		<include>KidsTVLeftMenu</include>
+		
+<!--  KidsTV Shows Label #1  -->		
+
+		<control type="button" id="3421" description="KidzTVSub1Label">
+			<posx>475</posx>
+			<posy>180</posy>
+			<width>500</width>
+			<height>325</height>
+			<align>left</align>
+			<include>KidsTVVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<label>Most Popular Shows</label>
+			<angle>90</angle>
+			<onup>3423</onup>
+			<ondown>3422</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3431,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/KidsMostPlayedTVShows.xsp,return)</onclick>
+		</control>	
+
+<!-- KidsTV Shows Submenu #1 -->
+		
+		<control type="list" id="3431" description="KidsTVSub1">
+			<include>subfade1</include>
+			<posx>510</posx>
+			<posy>60</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3433,$INFO[Container(3431).Position])</onup>
+			<ondown>Control.SetFocus(3432,$INFO[Container(3431).Position])</ondown>
+			<onleft>3421</onleft>
+			<onright>3431</onright>
+			<!--<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedtvinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>-->
+			<oninfo>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(3431).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>KidsTVVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3431)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3431)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content target="video" limit="10">special://skin/extras/playlists/KidsMostPlayedTVShows.xsp</content>
+		</control>
+
+<!-- KidsTV Shows Submenu #2 -->
+		
+		<control type="button" id="3422" description="KidsTVSub2Label">
+			<posx>475</posx>
+			<posy>515</posy>
+			<width>500</width>
+			<height>325</height>
+			<align>left</align>
+			<include>KidsTVVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<angle>90</angle>
+			<label>Recently Updated Shows</label>
+			<onup>3421</onup>
+			<ondown>3423</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3432,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/KidsRecentlyUpdatedTVShows.xsp,return)</onclick>
+		</control>
+		
+		<control type="list" id="3432" description="KidsTVSub2">
+			<include>subfade2</include>
+			<posx>510</posx>
+			<posy>390</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3431,$INFO[Container(3432).Position])</onup>
+			<ondown>Control.SetFocus(3433,$INFO[Container(3432).Position])</ondown>
+			<onleft>3422</onleft>
+			<onright>3432</onright>
+			<!--<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedtvinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>-->
+			<oninfo>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(3432).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>KidsTVVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3432)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3432)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content target="video" limit="10">special://skin/extras/playlists/KidsRecentlyUpdatedTVShows.xsp</content>
+		</control>
+
+<!-- KidsTV Submenu #3 -->
+		
+		<control type="button" id="3423" description="KidsTVSub3Label">
+			<posx>475</posx>
+			<posy>840</posy>
+			<width>500</width>
+			<height>325</height>
+			<align>left</align>
+			<include>KidsTVVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<angle>90</angle>
+			<label>Random Kids Shows</label>
+			<onup>3422</onup>
+			<ondown>3421</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3433,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/KidsRandomTVShows.xsp,return)</onclick>
+		</control>
+		
+		<control type="list" id="3433" description="KidsTVSub3">
+			<include>subfade3</include>
+			<posx>510</posx>
+			<posy>720</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3432,$INFO[Container(3433).Position])</onup>
+			<ondown>Control.SetFocus(3431,$INFO[Container(3433).Position])</ondown>
+			<onleft>3423</onleft>
+			<onright>3433</onright>
+			<!--<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[ListItem.Dbid])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>-->
+			<oninfo>RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[Container(3433).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>KidsTVVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3433)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3433)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content target="video" limit="10">special://skin/extras/playlists/KidsRandomTVShows.xsp</content>
+		</control>	
+		
+<!--  KidsMovies  -->	
+	
+		<control type="image" id="3405" description="TVleftarrow">
+			<include>KidsMovieVis</include>
+			<posx>185</posx>
+			<posy>445</posy>
+			<width>16</width>
+			<height>30</height>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>themecolor</colordiffuse>
+			<texture border="1">arrowleft.png</texture>
+		</control>
+	
+		<include>KidsMovieLeftMenu</include>
+
+<!--  KidsMovie Label #1  -->		
+
+		<control type="button" id="3521" description="KidzMovieSub1Label">
+			<posx>475</posx>
+			<posy>180</posy>
+			<width>500</width>
+			<height>325</height>
+			<align>left</align>
+			<include>KidsMovieVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<label>In Progress Movies</label>
+			<angle>90</angle>
+			<onup>3523</onup>
+			<ondown>3522</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3531,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/KidsInProgressMovies.xsp,return)</onclick>
+		</control>	
+
+<!-- KidsMovie Submenu #1 -->
+		
+		<control type="list" id="3531" description="KidsMovieSub1">
+			<include>subfade1</include>
+			<posx>510</posx>
+			<posy>60</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3533,$INFO[Container(3531).Position])</onup>
+			<ondown>Control.SetFocus(3532,$INFO[Container(3531).Position])</ondown>
+			<onleft>3521</onleft>
+			<onright>3531</onright>
+			<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>
+			<oninfo>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(3531).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>KidsMovieVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3531)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3531)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content target="video" limit="10">special://skin/extras/playlists/KidsInProgressMovies.xsp</content>
+		</control>
+
+<!-- KidsMovie Submenu #2 -->
+		
+		<control type="button" id="3522" description="KidsMovieSub2Label">
+			<posx>475</posx>
+			<posy>515</posy>
+			<width>500</width>
+			<height>325</height>
+			<align>left</align>
+			<include>KidsMovieVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<angle>90</angle>
+			<label>Recently Added Movies</label>
+			<onup>3521</onup>
+			<ondown>3523</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3532,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/KidsRecentlyAddedMovies.xsp,return)</onclick>
+		</control>
+		
+		<control type="list" id="3532" description="KidsMovieSub2">
+			<include>subfade2</include>
+			<posx>510</posx>
+			<posy>390</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3531,$INFO[Container(3532).Position])</onup>
+			<ondown>Control.SetFocus(3533,$INFO[Container(3532).Position])</ondown>
+			<onleft>3522</onleft>
+			<onright>3532</onright>
+			<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>
+			<oninfo>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(3532).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>KidsMovieVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3532)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3532)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content target="video" limit="10">special://skin/extras/playlists/KidsRecentlyAddedMovies.xsp</content>
+		</control>
+
+<!-- KidsMovie Submenu #3 -->
+		
+		<control type="button" id="3523" description="KidsMovieSub3Label">
+			<posx>475</posx>
+			<posy>840</posy>
+			<width>500</width>
+			<height>325</height>
+			<include>KidsMovieVis</include>
+			<include>HomeLabel</include>
+			<font>font13</font>
+			<angle>90</angle>
+			<label>Random Kids Movies</label>
+			<onup>3522</onup>
+			<ondown>3521</ondown>
+			<onleft>3000</onleft>
+			<onright>SetFocus(3533,0)</onright>
+			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/KidsRandomMovies.xsp,return)</onclick>
+		</control>
+		
+		<control type="list" id="3533" description="KidsMovieSub3">
+			<include>subfade3</include>
+			<posx>510</posx>
+			<posy>720</posy>
+			<width>1400</width>
+			<height>325</height>
+			<onup>Control.SetFocus(3532,$INFO[Container(3533).Position])</onup>
+			<ondown>Control.SetFocus(3531,$INFO[Container(3533).Position])</ondown>
+			<onleft>3523</onleft>
+			<onright>3533</onright>
+			<onclick condition="skin.hassetting(HomeSelectAction)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+			<onclick condition="!skin.hassetting(HomeSelectAction)">PlayMedia("$INFO[ListItem.FileNameAndPath]")</onclick>
+			<oninfo>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(3533).ListItem.Dbid])</oninfo>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<include>KidsMovieVis</include>
+			<include>MainItemLayout</include>
+			<focusedlayout width="200" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3533)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3533)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+				<include>VideoRezImage</include>
+			</focusedlayout>
+			<content target="video" limit="10">special://skin/extras/playlists/KidsRandomMovies.xsp</content>
+		</control>
+
+<!-- Channels Submenu -->
+		
+		<control type="panel" id="3631" description="ChannelsSub1">
+			<include>subfade2</include>
+			<posx>510</posx>
+			<posy>60</posy>
+			<width>1200</width>
+			<height>1800</height>
+			<onleft>3000</onleft>
+			<onright>3631</onright>
+			<orientation>vertical</orientation>
+			<preloaditems>3</preloaditems>
+			<scrolltime>200</scrolltime>
+			<visible>Control.HasFocus(3600) | Control.HasFocus(3631)</visible>
+			<itemlayout width="300" height="300">
+				<control type="image">
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true" fallback="views/list/defaultprogram.png">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+			</itemlayout>
+			<focusedlayout width="300" height="300">
+				<control type="image">
+					<!--poster visible when other menus have focus-->
+					<visible>!Control.HasFocus(3631)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true" fallback="views/list/defaultprogram.png">$INFO[ListItem.Art(thumb)]</texture>
+					<bordersize>8</bordersize>
+				</control>
+				<control type="image">
+					<!--highlight visible if control has focus-->
+					<visible>Control.HasFocus(3631)</visible>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="thumbs/thumb_mask.png" background="true" fallback="views/list/defaultprogram.png">$INFO[ListItem.Art(thumb)]</texture>
+					<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+					<bordersize>8</bordersize>
+				</control>
+			</focusedlayout>
+			<content target="programs" limit="10">plugin://script.extendedinfo?info=favourites</content>
+		</control>
+		
+<!-- Pictures Submenu -->
+
+		<include>PictureLeftMenu</include>
+	
+<!-- Settings Submenu -->
+
+		<control type="image" id="3405" description="TVleftarrow">
+			<visible>control.hasfocus(3900) | ControlGroup(3910).HasFocus()</visible>
+			<posx>185</posx>
+			<posy>785</posy>
+			<width>16</width>
+			<height>30</height>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>themecolor</colordiffuse>
+			<texture border="1">arrowleft.png</texture>
+		</control>
+
+		<include>SettingsLeftMenu</include>
+		
+<!-- RSS Feed  -->
+
+		<control type="rss" description="RSS Feed">
+			<posx>100</posx>
+			<posy>100</posy>
+			<width>400</width>
+			<height>21</height>
+			<font>font13_title</font>
+			<urlset>1</urlset>
+			<titlecolor>Red</titlecolor>
+			<headlinecolor>White</headlinecolor>
+			<textcolor>White</textcolor>
+		</control>
+		
+		<control type="image">
+			<description>Weather conditions</description>
+			<posx>10</posx>
+			<posy>1030</posy>
+			<width>48</width>
+			<height>48</height>
+			<texture>$INFO[Weather.Conditions]</texture>
+			<colordiffuse>98FFFFFFF</colordiffuse>
+			<visible effect="fade" time="250">Weather.IsFetched</visible>
+		</control>
+ 
+		<control type="label">
+			<description>Weather Temperature</description>
+			<posx>60</posx>
+			<posy>1045</posy>
+			<width>200</width>
+			<height>20</height>
+			<label>$INFO[Weather.Temperature]</label>
+			<font>font12</font>
+			<align>left</align>
+			<visible effect="fade" time="250">Weather.IsFetched</visible>
+		</control>
+ 
+		<!--<control type="label">
+			<description>Weather Location</description>
+			<posx>1000</posx>
+			<posy>620</posy>
+			<width>200</width>
+			<height>20</height>
+			<label>in $INFO[Weather.Location]</label>
+			<font>font12</font>
+			<align>left</align>
+			<visible effect="fade" time="250">Weather.IsFetched</visible>
+		</control>-->
+	
+	</controls>
+
+</window>
