@@ -48,28 +48,28 @@
 
 <!-- Home Menu -->
 			
-			<control type="group" id="10000">
+			<control type="group" id="14000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),home)</visible>
 				<include>Visible_Right_Delayed</include>
-				<control type="button" id="10888">
+				<control type="button" id="14888">
 					<width>1</width>
 					<height>1</height>
 					<label>-</label>
-					<onfocus>SetFocus(10001)</onfocus>
-					<onfocus condition="IntegerGreaterThan(Container(10200).NumItems,0)">SetFocus(10200)</onfocus>
-					<onfocus condition="IntegerGreaterThan(Container(10100).NumItems,0)">SetFocus(10100)</onfocus>
+					<onfocus>SetFocus(14001)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(14200).NumItems,0)">SetFocus(14200)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(14100).NumItems,0)">SetFocus(14100)</onfocus>
 					<onclick>noop</onclick>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 				</control>
-				<control type="grouplist" id="10001">
+				<control type="grouplist" id="14001">
 					<orientation>vertical</orientation>
 					<height>922</height>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<itemgap>-2</itemgap>
 					<include name="SubMenu">
-						<param name="list_id" value="10900"/>
-						<param name="ondown_id" value="10100"/>
+						<param name="list_id" value="14900"/>
+						<param name="ondown_id" value="14100"/>
 						<param name="visible" value="Library.HasContent(movies)"/>
 						<param name="item1_onclick" value="ActivateWindow(videos,RecentlyAddedMovies,return)" />
 						<param name="item1_icon" value="recentlyadded.png" />
@@ -97,39 +97,41 @@
 						<param name="item8_label" value="$LOCALIZE[653]" />
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="videodb://recentlyaddedmovies/"/>
-						<param name="widget_header" value="New DVD Releases"/>
+						<param name="content_path" value="plugin://script.extendedinfo?info=popularmovies"/>						
+						<param name="widget_header" value="Trending now"/>
 						<param name="widget_target" value="videos"/>
-						<param name="list_id" value="10100"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(5100).ListItem.Dbid])"/>
-						<param name="onup_id" value="10900"/>
-						<param name="ondown_id" value="10200"/>
+						<param name="list_id" value="14100"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(14100).ListItem.Dbid])"/>
+						<param name="onup_id" value="14900"/>
+						<param name="ondown_id" value="14200"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="videodb://recentlyaddedmovies/"/>
-						<param name="widget_header" value="$LOCALIZE[20386]"/>
+						<!--<param name="content_path" value="videodb://recentlyaddedmovies/"/>-->
+						<param name="content_path" value="plugin://script.extendedinfo?info=upcomingmovies"/>
+						<param name="widget_header" value="Up Coming"/>
 						<param name="widget_target" value="videos"/>
-						<param name="list_id" value="10200"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(5200).ListItem.Dbid])"/>
-						<param name="onup_id" value="10100"/>
-						<param name="ondown_id" value="10300"/>
+						<param name="list_id" value="14200"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(14200).ListItem.Dbid])"/>
+						<param name="onup_id" value="14100"/>
+						<param name="ondown_id" value="14300"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="special://skin/playlists/unwatched_movies.xsp"/>
-						<param name="widget_header" value="$LOCALIZE[31007]"/>
+						<!--<param name="content_path" value="special://skin/playlists/unwatched_movies.xsp"/>-->
+						<param name="content_path" value="plugin://script.extendedinfo,info=upcomingmovies"/>
+						<param name="widget_header" value="Wanks"/>
 						<param name="widget_target" value="videos"/>
-						<param name="list_id" value="10300"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(5300).ListItem.Dbid])"/>
-						<param name="onup_id" value="10200"/>
-						<param name="ondown_id" value="10400"/>
+						<param name="list_id" value="14300"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(14300).ListItem.Dbid])"/>
+						<param name="onup_id" value="14200"/>
+						<param name="ondown_id" value="14400"/>
 					</include>
 					<include name="WidgetListMovies">
 						<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
 						<param name="widget_header" value="$LOCALIZE[31006]"/>
 						<param name="widget_target" value="videos"/>
-						<param name="list_id" value="10400"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(5400).ListItem.Dbid])"/>
-						<param name="onup_id" value="10300"/>
+						<param name="list_id" value="14400"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(14400).ListItem.Dbid])"/>
+						<param name="onup_id" value="14300"/>
 						<param name="ondown_id" value="20001"/>
 					</include>
 					<include name="ImageWidgetHeader">
@@ -141,13 +143,15 @@
 						<param name="text_label" value="$LOCALIZE[31104]" />
 						<param name="button_label" value="$LOCALIZE[31110]" />
 						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-						<param name="button_id" value="10500"/>
+						<param name="button_id" value="14500"/>
 						<param name="visible" value="!Library.HasContent(movies)"/>
 						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
 					</include>
 				</control>
 			</control>
-			
+
+<!-- Movies -->			
+
 			<control type="group" id="5000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),movies)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -1008,7 +1012,7 @@
 					<width>382</width>
 					<height>671</height>
 					<pagecontrol>70</pagecontrol>
-					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),home) + Control.IsVisible(10000)">10000</onright>
+					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),home) + Control.IsVisible(14000)">14000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),movies) + Control.IsVisible(5000)">5000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),tv) + Control.IsVisible(6000)">6000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),music) + Control.IsVisible(7000)">7000</onright>
@@ -1142,7 +1146,7 @@
 						<item>
 							<label>Home</label>
 							<onclick>ActivateWindow(Weather)</onclick>
-							<thumb>icons/home/weather.png</thumb>
+							<thumb>icons/home/home.png</thumb>
 							<property name="id">home</property>
 							<visible>true</visible>
 						</item>
