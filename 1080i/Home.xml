@@ -197,11 +197,11 @@
 					</include>
 					<include name="WidgetListMovies">
 						<!--<param name="content_path" value="plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[Container(5200).ListItem.Dbid]"/>-->
-						<param name="content_path" value="plugin://script.skin.helper.service?action=similarmovies&amp;imdbid=$INFO[Container(5200).ListItem(1).IMDBNumber]"/>
-						<param name="widget_header" value="Because you watched $INFO[Container(5200).ListItem.title]"/>
+						<param name="content_path" value="plugin://script.skin.helper.service?action=similarmovies&amp;imdbid=$INFO[Container(18400).ListItem(0).IMDBNumber]"/>
+						<param name="widget_header" value="Because you watched $INFO[Container(18400).ListItem(0).title]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="18100"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18100).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18101).ListItem.Dbid])"/>
 						<param name="onup_id" value="18900"/>
 						<param name="ondown_id" value="18200"/>
 					</include>
@@ -225,8 +225,8 @@
 						<param name="ondown_id" value="18400"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
-						<param name="widget_header" value="$LOCALIZE[31006]"/>
+						<param name="content_path" value="special://skin/playlists/recentlywatched_movies.xsp"/>
+						<param name="widget_header" value="Recently watched"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="18400"/>
 						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18400).ListItem.Dbid])"/>
@@ -1480,7 +1480,7 @@
 							<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(movies.watched)]$INFO[Window(home).Property(movies.Count), / ]</label2>
 							<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
 							<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,Files,return)</onclick>
-							<thumb>icons/home/recommended.png</thumb>
+							<thumb>icons/home/kidsmovie.png</thumb>
 							<property name="id">kidsmovies</property>
 							<visible>true</visible>
 						</item>
@@ -1489,7 +1489,7 @@
 							<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(episodes.watched)]$INFO[Window(home).Property(episodes.Count), / ]</label2>
 							<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,TVShowTitles,return)</onclick>
 							<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,Files,return)</onclick>
-							<thumb>icons/home/tv.png</thumb>
+							<thumb>icons/home/kidstv.png</thumb>
 							<property name="id">kidstv</property>
 							<visible>true</visible>
 						</item>				
