@@ -316,8 +316,8 @@
 						<param name="ondown_id" value="5300"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="special://skin/playlists/unwatched_movies.xsp"/>
-						<param name="widget_header" value="$LOCALIZE[31007]"/>
+						<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
+						<param name="widget_header" value="$LOCALIZE[31006]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="5300"/>
 						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(5300).ListItem.Dbid])"/>
@@ -325,8 +325,8 @@
 						<param name="ondown_id" value="5400"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
-						<param name="widget_header" value="$LOCALIZE[31006]"/>
+						<param name="content_path" value="special://skin/playlists/unwatched_movies.xsp"/>
+						<param name="widget_header" value="$LOCALIZE[31007]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="5400"/>
 						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(5400).ListItem.Dbid])"/>
@@ -1448,14 +1448,14 @@
 							<onclick>ActivateWindow(Weather)</onclick>
 							<thumb>icons/home/home.png</thumb>
 							<property name="id">home</property>
-							<visible>true</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoHomeButton)</visible>
 						</item>
 						<item>
 							<label>Recommended</label>
 							<onclick>ActivateWindow(Weather)</onclick>
 							<thumb>icons/home/recommended.png</thumb>
 							<property name="id">recommended</property>
-							<visible>true</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoRecommendButton)</visible>
 						</item>
 						<item>
 							<label>$LOCALIZE[342]</label>
@@ -1482,7 +1482,7 @@
 							<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,Files,return)</onclick>
 							<thumb>icons/home/kidsmovie.png</thumb>
 							<property name="id">kidsmovies</property>
-							<visible>true</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoKidsMovieButton)</visible>
 						</item>
 						<item>
 							<label>Kids $LOCALIZE[20343]</label>
@@ -1491,7 +1491,7 @@
 							<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,Files,return)</onclick>
 							<thumb>icons/home/kidstv.png</thumb>
 							<property name="id">kidstv</property>
-							<visible>true</visible>
+							<visible>!Skin.HasSetting(HomeMenuNoKidsTVShowButton)</visible>
 						</item>				
 						<item>
 							<label>$LOCALIZE[2]</label>

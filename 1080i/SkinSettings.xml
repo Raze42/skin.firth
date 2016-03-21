@@ -139,6 +139,20 @@
 					<onup>610</onup>
 					<ondown>610</ondown>
 					<visible>Container(9000).HasFocus(2)</visible>
+					<control type="radiobutton" id="618">
+						<label>Home</label>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoHomeButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoHomeButton)</onclick>
+					</control>
+					<control type="radiobutton" id="619">
+						<label>Recommendations</label>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoRecommendButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoRecommendButton)</onclick>
+					</control>
 					<control type="radiobutton" id="611">
 						<label>$LOCALIZE[342]</label>
 						<width>1256</width>
@@ -152,6 +166,20 @@
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(HomeMenuNoTVShowButton)</selected>
 						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowButton)</onclick>
+					</control>
+					<control type="radiobutton" id="620">
+						<label>Kids $LOCALIZE[342]</label>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoKidsMovieButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoKidsMovieButton)</onclick>
+					</control>
+					<control type="radiobutton" id="621">
+						<label>Kids $LOCALIZE[20343]</label>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(HomeMenuNoKidsTVShowButton)</selected>
+						<onclick>Skin.ToggleSetting(HomeMenuNoKidsTVShowButton)</onclick>
 					</control>
 					<control type="radiobutton" id="613">
 						<label>$LOCALIZE[2]</label>
