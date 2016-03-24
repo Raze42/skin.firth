@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<smartplaylist type="movies">
-    <name>Recently Watched Movies</name>
+<smartplaylist type="tvshows">
+    <name>Kids Recently Watched TV Shows</name>
     <match>all</match>
     <rule field="inprogress" operator="false" />
 	<rule field="genre" operator="isnot">
