@@ -114,8 +114,8 @@
 						<param name="ondown_id" value="14300"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="plugin://script.extendedinfo?info=upcomingmovies"/>
-						<param name="widget_header" value="Coming to theatres"/>
+						<param name="content_path" value="plugin://script.extendedinfo?info=incinemamovies"/>
+						<param name="widget_header" value="Now in theatres"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="14300"/>
 						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(14300).ListItem.Dbid])"/>
@@ -123,8 +123,8 @@
 						<param name="ondown_id" value="14400"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
-						<param name="widget_header" value="$LOCALIZE[31006]"/>
+						<param name="content_path" value="plugin://script.extendedinfo?info=upcomingmovies"/>
+						<param name="widget_header" value="Coming to theatres"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="14400"/>
 						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(14400).ListItem.Dbid])"/>
@@ -196,17 +196,17 @@
 						<param name="item8_label" value="$LOCALIZE[653]" />
 					</include>
 					<include name="WidgetListMovies">
-						<!--<param name="content_path" value="plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[Container(5200).ListItem.Dbid]"/>-->
-						<param name="content_path" value="plugin://script.skin.helper.service?action=similarmovies&amp;imdbid=$INFO[Container(18400).ListItem(0).IMDBNumber]"/>
-						<param name="widget_header" value="Because you watched $INFO[Container(18400).ListItem(0).title]"/>
+						<!--<param name="content_path" value="plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[Container(5400).ListItem(0).Dbid]"/>-->
+						<param name="content_path" value="plugin://script.skin.helper.service?action=similarmovies&amp;imdbid=$INFO[Container(5400).ListItem(0).IMDBNumber]"/>
+						<param name="widget_header" value="Because you watched $INFO[Container(5400).ListItem(0).title]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="18100"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18101).ListItem.Dbid])"/>
+						<!--<param name="list_oninfo" value="Notification(Addon Required,Title-$INFO[Container(18100).ListItem.title] DBID-$INFO[Container(18100).ListItem.dbid] IMDB-$INFO[Container(18100).ListItem.IMDBNumber])"/>-->
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18100).ListItem.Dbid])"/>
 						<param name="onup_id" value="18900"/>
 						<param name="ondown_id" value="18200"/>
 					</include>
 					<include name="WidgetListMovies">
-						<!--<param name="content_path" value="videodb://recentlyaddedmovies/"/>-->
 						<param name="content_path" value="plugin://script.extendedinfo?info=newdvdmovies"/>
 						<param name="widget_header" value="New to DVD"/>
 						<param name="widget_target" value="videos"/>
@@ -396,7 +396,7 @@
 						<param name="item8_icon" value="updatelibrary.png" />
 						<param name="item8_label" value="$LOCALIZE[653]" />
 					</include>
-					<include name="WidgetListEpisodes">
+					<include name="WidgetListMovies">
 						<param name="content_path" value="special://skin/playlists/inprogress_tvshows.xsp"/>
 						<param name="sortby" value="lastplayed"/>
 						<param name="sortorder" value="descending"/>
@@ -481,7 +481,7 @@
 						<param name="list_id" value="16900"/>
 						<param name="ondown_id" value="16100"/>
 						<param name="visible" value="Library.HasContent(movies)"/>
-						<param name="item1_onclick" value="ActivateWindow(videos,RecentlyAddedMovies,return)" />
+						<param name="item1_onclick" value="ActivateWindow(videos,special://skin/playlists/kidsrecentlyadded_movies.xsp,return)" />
 						<param name="item1_icon" value="recentlyadded.png" />
 						<param name="item1_label" value="$LOCALIZE[20386]" />
 						<param name="item2_onclick" value="ActivateWindow(videos,MovieYears,return)" />
@@ -580,7 +580,7 @@
 						<param name="list_id" value="17900"/>
 						<param name="ondown_id" value="17100"/>
 						<param name="visible" value="Library.HasContent(tvshows)"/>
-						<param name="item1_onclick" value="ActivateWindow(Videos,RecentlyAddedEpisodes,return)" />
+						<param name="item1_onclick" value="ActivateWindow(Videos,special://skin/playlists/kidsrecentlyupdated_tvshows.xsp,return)" />
 						<param name="item1_icon" value="recentlyadded.png" />
 						<param name="item1_label" value="$LOCALIZE[20387]" />
 						<param name="item2_onclick" value="ActivateWindow(Videos,TVShowYears,return)" />
@@ -607,8 +607,6 @@
 					</include>
 					<include name="WidgetListEpisodes">
 						<param name="content_path" value="special://skin/playlists/kidsmostplayed_tvshows.xsp"/>
-						<!--<param name="sortby" value="lastplayed"/>
-						<param name="sortorder" value="descending"/>-->
 						<param name="widget_header" value="Most Popular"/>
 						<param name="item_image" value="$VAR[TVShowWidgetImageVar]" />
 						<param name="widget_target" value="videos"/>
@@ -622,7 +620,6 @@
 						<param name="content_path" value="special://skin/playlists/kidsrecentlyupdated_tvshows.xsp"/>
 						<param name="widget_header" value="$LOCALIZE[20387]"/>
 						<param name="item_image" value="$VAR[TVShowWidgetImageVar]" />
-						<!--<param name="item_image" value="$INFO[ListItem.Art(thumb)]" />-->
 						<param name="widget_target" value="videos"/>
 						<!--<param name="second_label" value="[COLOR button_focus]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode][/COLOR] $INFO[ListItem.Title]" />-->
 						<param name="second_label" value="$LOCALIZE[16102]: $INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ]" />
@@ -636,7 +633,8 @@
 						<param name="widget_header" value="Random TV shows"/>
 						<param name="item_image" value="$VAR[TVShowWidgetImageVar]" />
 						<param name="widget_target" value="videos"/>
-						<param name="second_label" value="$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]" />
+						<param name="second_label" value="$LOCALIZE[16102]: $INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ]" />
+						<!--<param name="second_label" value="$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]" />-->
 						<param name="list_id" value="17300"/>
 						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[Container(6300).ListItem.Dbid])"/>
 						<param name="onup_id" value="17200"/>
@@ -647,7 +645,8 @@
 						<param name="widget_header" value="Recently watched TV shows"/>
 						<param name="item_image" value="$VAR[TVShowWidgetImageVar]" />
 						<param name="widget_target" value="videos"/>
-						<param name="second_label" value="$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]" />
+						<param name="second_label" value="$LOCALIZE[16102]: $INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ]" />
+						<!--<param name="second_label" value="$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]" />-->
 						<param name="list_id" value="17400"/>
 						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[Container(6300).ListItem.Dbid])"/>
 						<param name="onup_id" value="17300"/>

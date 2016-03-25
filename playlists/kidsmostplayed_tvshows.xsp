@@ -6,5 +6,5 @@
         <value>children</value>
     </rule>
     <limit>50</limit>
-	<order direction="descending">playcount</order>
+    <order direction="descending">playcount</order>
 </smartplaylist>

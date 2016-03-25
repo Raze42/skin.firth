@@ -2,7 +2,7 @@
 <smartplaylist type="tvshows">
     <name>Kids Recently Watched TV Shows</name>
     <match>all</match>
-    <rule field="inprogress" operator="false" />
+    <!--<rule field="inprogress" operator="false" />-->
 	<rule field="genre" operator="isnot">
         <value>children</value>
     </rule>

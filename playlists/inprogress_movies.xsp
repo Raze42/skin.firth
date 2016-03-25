@@ -3,6 +3,9 @@
     <name>In-progress movies</name>
     <match>all</match>
     <rule field="inprogress" operator="true" />
+	<rule field="genre" operator="isnot">
+        <value>children</value>
+    </rule>
     <limit>10</limit>
     <order direction="descending">lastplayed</order>
 </smartplaylist>
