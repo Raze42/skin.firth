@@ -348,6 +348,21 @@
 					</include>
 				</control>
 			</control>
+			
+			<!--These are two dummy lists so that the number of movies and the number of watched movies can display under label2 of the main menu -->
+			<!--These are being used because the $INFO[Container(5999).TotalWatched] infolabel does not seem to be working. http://forum.kodi.tv/showthread.php?tid=266154 -->
+			<control type="list" id="5998" description="RecentMoviesDummy">
+				<onfocus>Control.SetFocus(9000)</onfocus>
+				<visible allowhiddenfocus="true">false</visible>
+				<itemlayout></itemlayout>
+				<content target="video">special://skin/playlists/allwatched_movies.xsp</content>
+			</control>
+			<control type="list" id="5999" description="WatchedMoviesDummy">
+				<onfocus>Control.SetFocus(9000)</onfocus>
+				<visible allowhiddenfocus="true">false</visible>
+				<itemlayout></itemlayout>
+				<content target="video">special://skin/playlists/movies.xsp</content>
+			</control>			
 <!--TV-->			
 			<control type="group" id="6000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),tv)</visible>
@@ -457,6 +472,21 @@
 					</include>
 				</control>
 			</control>
+			
+			<!--These are two dummy lists so that the number of episodes and the number of watched episodes can display under label2 of the main menu -->
+			<!--These are being used because the $INFO[Container(5999).TotalWatched] infolabel does not seem to be working. http://forum.kodi.tv/showthread.php?tid=266154 -->
+			<control type="list" id="6998" description="RecentMoviesDummy">
+				<onfocus>Control.SetFocus(9000)</onfocus>
+				<visible allowhiddenfocus="true">false</visible>
+				<itemlayout></itemlayout>
+				<content target="video">special://skin/playlists/allwatched_episodes.xsp</content>
+			</control>
+			<control type="list" id="6999" description="WatchedMoviesDummy">
+				<onfocus>Control.SetFocus(9000)</onfocus>
+				<visible allowhiddenfocus="true">false</visible>
+				<itemlayout></itemlayout>
+				<content target="video">special://skin/playlists/episodes.xsp</content>
+			</control>	
 <!--Kids Movies-->
 			<control type="group" id="16000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),kidsmovies)</visible>
@@ -556,6 +586,21 @@
 						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
 					</include>
 				</control>
+			</control>
+			
+			<!--These are two dummy lists so that the number of kids movies and the number of watched kids movies can display under label2 of the main menu -->
+			<!--These are being used because the $INFO[Container(5999).TotalWatched] infolabel does not seem to be working. http://forum.kodi.tv/showthread.php?tid=266154 -->
+			<control type="list" id="16998" description="RecentMoviesDummy">
+				<onfocus>Control.SetFocus(9000)</onfocus>
+				<visible allowhiddenfocus="true">false</visible>
+				<itemlayout></itemlayout>
+				<content target="video">special://skin/playlists/kidsallwatched_movies.xsp</content>
+			</control>
+			<control type="list" id="16999" description="WatchedMoviesDummy">
+				<onfocus>Control.SetFocus(9000)</onfocus>
+				<visible allowhiddenfocus="true">false</visible>
+				<itemlayout></itemlayout>
+				<content target="video">special://skin/playlists/kids_movies.xsp</content>
 			</control>		
 <!--Kids TV-->
 			<control type="group" id="17000">
@@ -666,6 +711,21 @@
 						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVShowButton)"/>
 					</include>
 				</control>
+			</control>
+			
+			<!--These are two dummy lists so that the number of episodes and the number of watched episodes can display under label2 of the main menu -->
+			<!--These are being used because the $INFO[Container(5999).TotalWatched] infolabel does not seem to be working. http://forum.kodi.tv/showthread.php?tid=266154 -->
+			<control type="list" id="17998" description="KidsWatchedEpisodesDummy">
+				<onfocus>Control.SetFocus(9000)</onfocus>
+				<visible allowhiddenfocus="true">false</visible>
+				<itemlayout></itemlayout>
+				<content target="video">special://skin/playlists/kidsallwatched_episodes.xsp</content>
+			</control>
+			<control type="list" id="17999" description="KidsEpisodesDummy">
+				<onfocus>Control.SetFocus(9000)</onfocus>
+				<visible allowhiddenfocus="true">false</visible>
+				<itemlayout></itemlayout>
+				<content target="video">special://skin/playlists/kids_episodes.xsp</content>
 			</control>
 <!--Music-->			
 			<control type="group" id="7000">
@@ -1482,8 +1542,10 @@
 						</item>
 						<item>
 							<label>$LOCALIZE[342]</label>
-							<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(movies.watched)]$INFO[Window(home).Property(movies.Count), / ]</label2>
-							<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+							<label2>$LOCALIZE[16102]: $INFO[Container(5998).NumItems]$INFO[Container(5999).NumItems, / ]</label2>
+							<!--<label2>$LOCALIZE[16102]: $INFO[Container(5999).TotalWatched]$INFO[Container(5999).NumItems, / ]</label2>-->
+							<!--<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(movies.watched)]$INFO[Window(home).Property(movies.Count)1, / ]</label2>-->
+							<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/playlists/movies.xsp,return)</onclick>
 							<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,Files,return)</onclick>
 							<thumb>icons/home/movies.png</thumb>
 							<property name="id">movies</property>
@@ -1491,8 +1553,9 @@
 						</item>
 						<item>
 							<label>$LOCALIZE[20343]</label>
-							<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(episodes.watched)]$INFO[Window(home).Property(episodes.Count), / ]</label2>
-							<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,TVShowTitles,return)</onclick>
+							<label2>$LOCALIZE[16102]: $INFO[Container(6998).NumItems]$INFO[Container(6999).NumItems, / ]</label2>
+							<!--<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(episodes.watched)]$INFO[Window(home).Property(episodes.Count), / ]</label2>-->
+							<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/playlists/tvshows.xsp,return)</onclick>
 							<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,Files,return)</onclick>
 							<thumb>icons/home/tv.png</thumb>
 							<property name="id">tv</property>
@@ -1500,8 +1563,9 @@
 						</item>
 						<item>
 							<label>Kids $LOCALIZE[342]</label>
-							<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(movies.watched)]$INFO[Window(home).Property(movies.Count), / ]</label2>
-							<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+							<label2>$LOCALIZE[16102]: $INFO[Container(16998).NumItems]$INFO[Container(16999).NumItems, / ]</label2>
+							<!--<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(movies.watched)]$INFO[Window(home).Property(movies.Count), / ]</label2>-->
+							<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/playlists/kids_movies.xsp,return)</onclick>
 							<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,Files,return)</onclick>
 							<thumb>icons/home/kidsmovie.png</thumb>
 							<property name="id">kidsmovies</property>
@@ -1510,7 +1574,7 @@
 						<item>
 							<label>Kids $LOCALIZE[20343]</label>
 							<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(episodes.watched)]$INFO[Window(home).Property(episodes.Count), / ]</label2>
-							<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,TVShowTitles,return)</onclick>
+							<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,special://skin/playlists/kids_tvshows.xsp,return)</onclick>
 							<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,Files,return)</onclick>
 							<thumb>icons/home/kidstv.png</thumb>
 							<property name="id">kidstv</property>

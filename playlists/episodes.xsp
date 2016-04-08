@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="episodes">
+    <name>All Episodes</name>
+    <match>all</match>
+	<rule field="genre" operator="isnot">
+        <value>children</value>
+    </rule>
+    <order direction="ascending">sorttitle</order>
+</smartplaylist>
