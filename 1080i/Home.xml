@@ -307,7 +307,7 @@
 						<param name="ondown_id" value="5200"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="videodb://recentlyaddedmovies/"/>
+						<param name="content_path" value="special://skin/playlists/recentlyadded_movies.xsp"/>  
 						<param name="widget_header" value="$LOCALIZE[20386]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="5200"/>
@@ -1643,8 +1643,8 @@
 				<ondown>14200</ondown>
 				<onright>2000</onright>
 				<include name="BottomMainMenuItem">
-					<param name="control_id" value="801" />
-					<param name="onclick" value="ActivateWindow(filemanager)" />
+					<param name="control_id" value="805" />
+					<param name="onclick" value="ActivateWindow(playercontrols)" />
 					<param name="icon" value="icons/filemanager.png" />
 				</include>
 				<include name="BottomMainMenuItem">
@@ -1661,6 +1661,11 @@
 					<param name="control_id" value="804" />
 					<param name="onclick" value="ActivateWindow(shutdownmenu)" />
 					<param name="icon" value="icons/power.png" />
+				</include>
+				<include name="BottomMainMenuItem">
+					<param name="control_id" value="801" />
+					<param name="onclick" value="ActivateWindow(filemanager)" />
+					<param name="icon" value="icons/filemanager.png" />
 				</include>
 			</control>
 		</control>
