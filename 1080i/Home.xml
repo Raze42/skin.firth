@@ -99,17 +99,16 @@
 						<param name="widget_header" value="Trending now"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="14100"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(14100).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,id=$INFO[Container(14100).ListItem.Property(ID)])"/>
 						<param name="onup_id" value="14900"/>
 						<param name="ondown_id" value="14200"/>
 					</include>
 					<include name="WidgetListMovies">
-						<!--<param name="content_path" value="videodb://recentlyaddedmovies/"/>-->
 						<param name="content_path" value="plugin://script.extendedinfo?info=newdvdmovies"/>
 						<param name="widget_header" value="New to DVD"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="14200"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(14200).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,imdb_id=$INFO[Container(14200).ListItem.Property(imdb_id)])"/>
 						<param name="onup_id" value="14100"/>
 						<param name="ondown_id" value="14300"/>
 					</include>
@@ -118,7 +117,7 @@
 						<param name="widget_header" value="Now in theatres"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="14300"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(14300).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,id=$INFO[Container(14300).ListItem.Property(ID)])"/>
 						<param name="onup_id" value="14200"/>
 						<param name="ondown_id" value="14400"/>
 					</include>
@@ -127,7 +126,7 @@
 						<param name="widget_header" value="Coming to theatres"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="14400"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(14400).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,id=$INFO[Container(14400).ListItem.Property(ID)])"/>
 						<param name="onup_id" value="14300"/>
 						<param name="ondown_id" value="20001"/>
 					</include>
@@ -196,40 +195,38 @@
 						<param name="item8_label" value="$LOCALIZE[653]" />
 					</include>
 					<include name="WidgetListMovies">
-						<!--<param name="content_path" value="plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[Container(5400).ListItem(0).Dbid]"/>-->
-						<param name="content_path" value="plugin://script.skin.helper.service?action=similarmovies&amp;imdbid=$INFO[Container(5400).ListItem(0).IMDBNumber]"/>
+						<param name="content_path" value="plugin://script.skin.helper.service?action=similarmovies&amp;imdbid=$INFO[Container(5400).ListItem(0).IMDBNumber]&amp;reload=$INFO[Window(Home).Property(widgetreload2)"/>
 						<param name="widget_header" value="Because you watched $INFO[Container(5400).ListItem(0).title]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="18100"/>
-						<!--<param name="list_oninfo" value="Notification(Addon Required,Title-$INFO[Container(18100).ListItem.title] DBID-$INFO[Container(18100).ListItem.dbid] IMDB-$INFO[Container(18100).ListItem.IMDBNumber])"/>-->
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18100).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18100).ListItem.Property(DBID)])"/>
 						<param name="onup_id" value="18900"/>
 						<param name="ondown_id" value="18200"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="plugin://script.extendedinfo?info=newdvdmovies"/>
-						<param name="widget_header" value="New to DVD"/>
+						<param name="content_path" value="plugin://script.skin.helper.service?action=similarmovies&amp;imdbid=$INFO[Container(5400).ListItem(1).IMDBNumber]"/>
+						<param name="widget_header" value="Because you watched $INFO[Container(5400).ListItem(1).title]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="18200"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18200).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18200).ListItem.Property(DBID)])"/>
 						<param name="onup_id" value="18100"/>
 						<param name="ondown_id" value="18300"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="plugin://script.extendedinfo?info=upcomingmovies"/>
-						<param name="widget_header" value="Coming to theatres"/>
+						<param name="content_path" value="plugin://script.skin.helper.service?action=similarmovies&amp;imdbid=$INFO[Container(5400).ListItem(2).IMDBNumber]&amp;reload=$INFO[Window(Home).Property(widgetreload2)"/>
+						<param name="widget_header" value="Because you watched $INFO[Container(5400).ListItem(2).title]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="18300"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18300).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18300).ListItem.Property(DBID)])"/>
 						<param name="onup_id" value="18200"/>
 						<param name="ondown_id" value="18400"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="special://skin/playlists/recentlywatched_movies.xsp"/>
-						<param name="widget_header" value="Recently watched"/>
+						<param name="content_path" value="plugin://script.skin.helper.service?action=similarmovies&amp;imdbid=$INFO[Container(5400).ListItem(3).IMDBNumber]&amp;reload=$INFO[Window(Home).Property(widgetreload2)"/>
+						<param name="widget_header" value="Because you watched $INFO[Container(5400).ListItem(3).title]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="18400"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18400).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(18400).ListItem.Property(DBID)])"/>
 						<param name="onup_id" value="18300"/>
 						<param name="ondown_id" value="20001"/>
 					</include>
@@ -411,7 +408,7 @@
 						<param name="item8_icon" value="updatelibrary.png" />
 						<param name="item8_label" value="$LOCALIZE[653]" />
 					</include>
-					<include name="WidgetListMovies">
+					<include name="WidgetListEpisodes">
 						<param name="content_path" value="special://skin/playlists/inprogress_tvshows.xsp"/>
 						<param name="sortby" value="lastplayed"/>
 						<param name="sortorder" value="descending"/>
