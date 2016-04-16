@@ -864,7 +864,9 @@
 						<param name="item2_onclick" value="ActivateWindow(systemsettings,addons)" />
 						<param name="item2_icon" value="settings.png" />
 						<param name="item2_label" value="$LOCALIZE[1045]" />
-						<param name="item3_vis" value="False" />
+						<param name="item3_onclick" value="ActivateWindow(filemanager)" />
+						<param name="item3_icon" value="filemanager.png" />
+						<param name="item3_label" value="File Manager" />
 						<param name="item4_vis" value="False" />
 						<param name="item5_vis" value="False" />
 						<param name="item6_vis" value="False" />
@@ -1640,9 +1642,9 @@
 				<ondown>14200</ondown>
 				<onright>2000</onright>
 				<include name="BottomMainMenuItem">
-					<param name="control_id" value="805" />
+					<param name="control_id" value="801" />
 					<param name="onclick" value="ActivateWindow(playercontrols)" />
-					<param name="icon" value="icons/filemanager.png" />
+					<param name="icon" value="icons/remote.png" />
 				</include>
 				<include name="BottomMainMenuItem">
 					<param name="control_id" value="802" />
@@ -1659,11 +1661,11 @@
 					<param name="onclick" value="ActivateWindow(shutdownmenu)" />
 					<param name="icon" value="icons/power.png" />
 				</include>
-				<include name="BottomMainMenuItem">
-					<param name="control_id" value="801" />
+				<!--<include name="BottomMainMenuItem">
+					<param name="control_id" value="805" />
 					<param name="onclick" value="ActivateWindow(filemanager)" />
 					<param name="icon" value="icons/filemanager.png" />
-				</include>
+				</include>-->
 			</control>
 		</control>
 		<control type="radiobutton" id="14200">
