@@ -43,15 +43,7 @@
 							<onclick>noop</onclick>
 						</item>
 						<item id="3">
-							<label>Custom sub menu 1</label>
-							<onclick>noop</onclick>
-						</item>
-						<item id="4">
-							<label>Custom sub menu 2</label>
-							<onclick>noop</onclick>
-						</item>
-						<item id="4">
-							<label>Custom sub menu 3</label>
+							<label>Setup custom menus</label>
 							<onclick>noop</onclick>
 						</item>
 					</content>
@@ -239,60 +231,263 @@
 					<onup>610</onup>
 					<ondown>610</ondown>
 					<visible>Container(9000).HasFocus(3)</visible>
+				<!--Custom Menu 1-->
 					<control type="radiobutton" id="631">
-						<label>Enabled</label>
+						<label>Custom menu 1 enabled</label>
 						<width>1256</width>
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(HomeMenuNoCustom1)</selected>
 						<onclick>Skin.ToggleSetting(HomeMenuNoCustom1)</onclick>
 					</control>
-					<control type="radiobutton" id="632">
-						<label>Item 2</label>
+					<control type="button" id="632">
+						<label>Custom menu 1 label</label>
+						<label2>$INFO[Skin.String(CustomMenu1Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu1Label)</onclick>
+					</control>
+					<control type="button" id="633">
+						<label>Custom menu 1 image</label>
+						<label2>$INFO[Skin.String(CustomMenu1Image)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetImage(CustomMenu1Image[,,/icons/home/])</onclick>
+					</control>
+					<control type="button" id="634">
+						<label>Custom menu 1 action</label>
+						<label2>$INFO[Skin.String(CustomMenu1Action)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu1Action,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="637">
+						<label> Widget 1 label</label>
+						<label2>$INFO[Skin.String(CustomMenu1Widget1Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu1Widget1Label)</onclick>
+					</control>
+					<control type="button" id="638">
+						<label> Widget 1 content</label>
+						<label2>$INFO[Skin.String(CustomMenu1Sub1Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu1Sub1Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="639">
+						<label> Widget 2 label</label>
+						<label2>$INFO[Skin.String(CustomMenu1Widget2Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu1Widget2Label)</onclick>
+					</control>
+					<control type="button" id="640">
+						<label> Widget 2 content</label>
+						<label2>$INFO[Skin.String(CustomMenu1Widget2Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu1Widget2Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="641">
+						<label> Widget 3 label</label>
+						<label2>$INFO[Skin.String(CustomMenu1Widget3Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu1Widget3Label)</onclick>
+					</control>
+					<control type="button" id="642">
+						<label> Widget 3 content</label>
+						<label2>$INFO[Skin.String(CustomMenu1Widget3Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu1Widget3Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="643">
+						<label> Widget 4 label</label>
+						<label2>$INFO[Skin.String(CustomMenu1Widget4Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu1Widget4Label)</onclick>
+					</control>
+					<control type="button" id="644">
+						<label> Widget 4 content</label>
+						<label2>$INFO[Skin.String(CustomMenu1Widget4Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu1Widget4Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
+				<!--Custom Menu 2-->
+					<control type="radiobutton" id="650">
+						<label>Custom menu 2 enabled</label>
 						<width>1256</width>
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(HomeMenuNoCustom2)</selected>
 						<onclick>Skin.ToggleSetting(HomeMenuNoCustom2)</onclick>
 					</control>
-					<control type="radiobutton" id="633">
-						<label>Item 3</label>
+					<control type="button" id="651">
+						<label>Custom menu 2 label</label>
+						<label2>$INFO[Skin.String(CustomMenu2Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu2Label)</onclick>
+					</control>
+					<control type="button" id="652">
+						<label>Custom menu 2 image</label>
+						<label2>$INFO[Skin.String(CustomMenu2Image)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetImage(CustomMenu2Image[,,/icons/home/])</onclick>
+					</control>
+					<control type="button" id="653">
+						<label>Custom menu 2 action</label>
+						<label2>$INFO[Skin.String(CustomMenu2Action)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu2Action,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="654">
+						<label> Widget 1 label</label>
+						<label2>$INFO[Skin.String(CustomMenu2Widget1Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu2Widget1Label)</onclick>
+					</control>
+					<control type="button" id="655">
+						<label> Widget 1 content</label>
+						<label2>$INFO[Skin.String(CustomMenu2Sub1Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu2Sub1Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="656">
+						<label> Widget 2 label</label>
+						<label2>$INFO[Skin.String(CustomMenu2Widget2Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu2Widget2Label)</onclick>
+					</control>
+					<control type="button" id="657">
+						<label> Widget 2 content</label>
+						<label2>$INFO[Skin.String(CustomMenu2Widget2Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu2Widget2Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="658">
+						<label> Widget 3 label</label>
+						<label2>$INFO[Skin.String(CustomMenu2Widget3Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu2Widget3Label)</onclick>
+					</control>
+					<control type="button" id="659">
+						<label> Widget 3 content</label>
+						<label2>$INFO[Skin.String(CustomMenu2Widget3Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu2Widget3Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="660">
+						<label> Widget 4 label</label>
+						<label2>$INFO[Skin.String(CustomMenu2Widget4Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu2Widget4Label)</onclick>
+					</control>
+					<control type="button" id="661">
+						<label> Widget 4 content</label>
+						<label2>$INFO[Skin.String(CustomMenu2Widget4Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu2Widget4Content,.xsp,special://skin/playlists/)</onclick>
+					</control>			
+				<!--Custom Menu 3-->
+					<control type="radiobutton" id="670">
+						<label>Custom menu 3 enabled</label>
 						<width>1256</width>
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(HomeMenuNoCustom3)</selected>
 						<onclick>Skin.ToggleSetting(HomeMenuNoCustom3)</onclick>
 					</control>
+					<control type="button" id="671">
+						<label>Custom menu 3 label</label>
+						<label2>$INFO[Skin.String(CustomMenu3Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu3Label)</onclick>
+					</control>
+					<control type="button" id="672">
+						<label>Custom menu 3 image</label>
+						<label2>$INFO[Skin.String(CustomMenu3Image)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetImage(CustomMenu3Image[,,/icons/home/])</onclick>
+					</control>
+					<control type="button" id="673">
+						<label>Custom menu 3 action</label>
+						<label2>$INFO[Skin.String(CustomMenu3Action)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu3Action,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="674">
+						<label> Widget 1 label</label>
+						<label2>$INFO[Skin.String(CustomMenu3Widget1Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu3Widget1Label)</onclick>
+					</control>
+					<control type="button" id="675">
+						<label> Widget 1 content</label>
+						<label2>$INFO[Skin.String(CustomMenu3Sub1Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu3Sub1Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="676">
+						<label> Widget 2 label</label>
+						<label2>$INFO[Skin.String(CustomMenu3Widget2Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu3Widget2Label)</onclick>
+					</control>
+					<control type="button" id="677">
+						<label> Widget 2 content</label>
+						<label2>$INFO[Skin.String(CustomMenu3Widget2Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu3Widget2Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="678">
+						<label> Widget 3 label</label>
+						<label2>$INFO[Skin.String(CustomMenu3Widget3Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu3Widget3Label)</onclick>
+					</control>
+					<control type="button" id="679">
+						<label> Widget 3 content</label>
+						<label2>$INFO[Skin.String(CustomMenu3Widget3Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu3Widget3Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
+					<control type="button" id="680">
+						<label> Widget 4 label</label>
+						<label2>$INFO[Skin.String(CustomMenu3Widget4Label)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetString(CustomMenu3Widget4Label)</onclick>
+					</control>
+					<control type="button" id="681">
+						<label> Widget 4 content</label>
+						<label2>$INFO[Skin.String(CustomMenu3Widget4Content)]</label2>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>Skin.SetFile(CustomMenu3Widget4Content,.xsp,special://skin/playlists/)</onclick>
+					</control>
 				</control>
-				<control type="grouplist" id="640">
-					<left>442</left>
-					<top>160</top>
-					<width>1256</width>
-					<height>610</height>
-					<onleft>9000</onleft>
-					<onright>60</onright>
-					<onup>610</onup>
-					<ondown>610</ondown>
-					<visible>Container(9000).HasFocus(4)</visible>
-					<control type="radiobutton" id="641">
-						<label>Enabled</label>
-						<width>1256</width>
-						<include>DefaultSettingButton</include>
-						<selected>!Skin.HasSetting(HomeMenuNoCustom2)</selected>
-						<onclick>Skin.ToggleSetting(HomeMenuNoCustom2)</onclick>
-					</control>
-					<control type="radiobutton" id="642">
-						<label>Item 2</label>
-						<width>1256</width>
-						<include>DefaultSettingButton</include>
-						<selected>!Skin.HasSetting(HomeMenuNoCustom2)</selected>
-						<onclick>Skin.ToggleSetting(HomeMenuNoCustom2)</onclick>
-					</control>
-					<control type="radiobutton" id="643">
-						<label>Item 3</label>
-						<width>1256</width>
-						<include>DefaultSettingButton</include>
-						<selected>!Skin.HasSetting(HomeMenuNoCustom3)</selected>
-						<onclick>Skin.ToggleSetting(HomeMenuNoCustom3)</onclick>
-					</control>
-				</control>
+		
 				<control type="textbox" id="6">
 					<description>description area</description>
 					<left>480</left>

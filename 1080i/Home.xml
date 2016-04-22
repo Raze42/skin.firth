@@ -245,6 +245,108 @@
 					</include>
 				</control>
 			</control>
+
+<!-- Custom1 -->
+			<control type="group" id="31000">
+				<visible>Stringcompare(Container(9000).ListItem.Property(id),custom1)</visible>
+				<include>Visible_Right_Delayed</include>
+				<control type="button" id="31888">
+					<width>1</width>
+					<height>1</height>
+					<label>-</label>
+					<onfocus>SetFocus(31001)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(21200).NumItems,0)">SetFocus(31200)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(21100).NumItems,0)">SetFocus(31100)</onfocus>
+					<onclick>noop</onclick>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="grouplist" id="31001">
+					<orientation>vertical</orientation>
+					<height>922</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemgap>-2</itemgap>
+					<include name="SubMenu">
+						<param name="list_id" value="31900"/>
+						<param name="ondown_id" value="31100"/>
+						<param name="visible" value="Library.HasContent(movies)"/>
+						<param name="item1_onclick" value="ActivateWindow(videos,RecentlyAddedMovies,return)" />
+						<param name="item1_icon" value="recentlyadded.png" />
+						<param name="item1_label" value="shit dog" />
+						<param name="item2_onclick" value="ActivateWindow(videos,MovieYears,return)" />
+						<param name="item2_icon" value="years.png" />
+						<param name="item2_label" value="$LOCALIZE[652]" />
+						<param name="item3_onclick" value="ActivateWindow(videos,MovieSets,return)" />
+						<param name="item3_icon" value="sets.png" />
+						<param name="item3_label" value="$LOCALIZE[31075]" />
+						<param name="item4_onclick" value="ActivateWindow(videos,MovieGenres,return)" />
+						<param name="item4_icon" value="genres.png" />
+						<param name="item4_label" value="$LOCALIZE[135]" />
+						<param name="item5_onclick" value="ActivateWindow(videos,MovieActors,return)" />
+						<param name="item5_icon" value="actors.png" />
+						<param name="item5_label" value="$LOCALIZE[344]" />
+						<param name="item6_onclick" value="ActivateWindow(videos,MovieTags,return)" />
+						<param name="item6_icon" value="tags.png" />
+						<param name="item6_label" value="$LOCALIZE[20459]" />
+						<param name="item7_onclick" value="ActivateWindow(videos,library://video/movies/,return)" />
+						<param name="item7_icon" value="media.png" />
+						<param name="item7_label" value="$LOCALIZE[31074]" />
+						<param name="item8_onclick" value="UpdateLibrary(video)" />
+						<param name="item8_icon" value="updatelibrary.png" />
+						<param name="item8_label" value="$LOCALIZE[653]" />
+					</include>
+					<include name="WidgetListMovies">
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu1Sub1Content)]"/>
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu1Widget1Label)]"/>
+						<param name="widget_target" value="videos"/>
+						<param name="list_id" value="31100"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(31100).ListItem.Dbid])"/>
+						<param name="onup_id" value="31900"/>
+						<param name="ondown_id" value="31200"/>
+					</include>
+					<include name="WidgetListMovies">
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu1Widget2Content)]"/>  
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu1Widget2Label)]"/>
+						<param name="widget_target" value="videos"/>
+						<param name="list_id" value="31200"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(31200).ListItem.Dbid])"/>
+						<param name="onup_id" value="31100"/>
+						<param name="ondown_id" value="31300"/>
+					</include>
+					<include name="WidgetListMovies">
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu1Widget3Content)]"/>
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu1Widget3Label)]"/>
+						<param name="widget_target" value="videos"/>
+						<param name="list_id" value="31300"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(31300).ListItem.Dbid])"/>
+						<param name="onup_id" value="31200"/>
+						<param name="ondown_id" value="31400"/>
+					</include>
+					<include name="WidgetListMovies">
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu1Widget4Content)]"/>
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu1Widget4Label)]"/>
+						<param name="widget_target" value="videos"/>
+						<param name="list_id" value="31400"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(31400).ListItem.Dbid])"/>
+						<param name="onup_id" value="31300"/>
+						<param name="ondown_id" value="20001"/>
+					</include>
+					<include name="ImageWidgetHeader">
+						<param name="widget_header" value="$LOCALIZE[342]" />
+						<param name="visible" value="!Library.HasContent(movies)"/>
+					</include>
+					<include name="ImageWidget">
+						<param name="image_path" value="special://skin/extras/home-images/movie.jpg"/>
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[31110]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="31500"/>
+						<param name="visible" value="!Library.HasContent(movies)"/>
+						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
+					</include>
+				</control>
+			</control>		
+			
 <!-- Movies -->
 			<control type="group" id="5000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),movies)</visible>
@@ -484,34 +586,33 @@
 				<itemlayout></itemlayout>
 				<content target="video">special://skin/playlists/episodes.xsp</content>
 			</control>	
-
-<!-- Custom1 -->
-			<control type="group" id="21000">
-				<visible>Stringcompare(Container(9000).ListItem.Property(id),custom1)</visible>
+<!-- Custom2 -->
+			<control type="group" id="32000">
+				<visible>Stringcompare(Container(9000).ListItem.Property(id),custom2)</visible>
 				<include>Visible_Right_Delayed</include>
-				<control type="button" id="21888">
+				<control type="button" id="32888">
 					<width>1</width>
 					<height>1</height>
 					<label>-</label>
-					<onfocus>SetFocus(5001)</onfocus>
-					<onfocus condition="IntegerGreaterThan(Container(21200).NumItems,0)">SetFocus(21200)</onfocus>
-					<onfocus condition="IntegerGreaterThan(Container(21100).NumItems,0)">SetFocus(21100)</onfocus>
+					<onfocus>SetFocus(32001)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(21200).NumItems,0)">SetFocus(32200)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(21100).NumItems,0)">SetFocus(32100)</onfocus>
 					<onclick>noop</onclick>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 				</control>
-				<control type="grouplist" id="21001">
+				<control type="grouplist" id="32001">
 					<orientation>vertical</orientation>
 					<height>922</height>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<itemgap>-2</itemgap>
 					<include name="SubMenu">
-						<param name="list_id" value="21900"/>
-						<param name="ondown_id" value="21100"/>
+						<param name="list_id" value="32900"/>
+						<param name="ondown_id" value="32100"/>
 						<param name="visible" value="Library.HasContent(movies)"/>
 						<param name="item1_onclick" value="ActivateWindow(videos,RecentlyAddedMovies,return)" />
 						<param name="item1_icon" value="recentlyadded.png" />
-						<param name="item1_label" value="$LOCALIZE[20386]" />
+						<param name="item1_label" value="shit dog" />
 						<param name="item2_onclick" value="ActivateWindow(videos,MovieYears,return)" />
 						<param name="item2_icon" value="years.png" />
 						<param name="item2_label" value="$LOCALIZE[652]" />
@@ -535,39 +636,39 @@
 						<param name="item8_label" value="$LOCALIZE[653]" />
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="special://skin/playlists/inprogress_movies.xsp"/>
-						<param name="widget_header" value="$LOCALIZE[31010]"/>
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu2Sub1Content)]"/>
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu2Widget1Label)]"/>
 						<param name="widget_target" value="videos"/>
-						<param name="list_id" value="21100"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(21100).ListItem.Dbid])"/>
-						<param name="onup_id" value="21900"/>
-						<param name="ondown_id" value="21200"/>
+						<param name="list_id" value="32100"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(31100).ListItem.Dbid])"/>
+						<param name="onup_id" value="32900"/>
+						<param name="ondown_id" value="32200"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="special://skin/playlists/recentlyadded_movies.xsp"/>  
-						<param name="widget_header" value="$LOCALIZE[20386]"/>
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu2Widget2Content)]"/>  
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu2Widget2Label)]"/>
 						<param name="widget_target" value="videos"/>
-						<param name="list_id" value="21200"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(5200).ListItem.Dbid])"/>
-						<param name="onup_id" value="21100"/>
-						<param name="ondown_id" value="21300"/>
+						<param name="list_id" value="32200"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(32200).ListItem.Dbid])"/>
+						<param name="onup_id" value="32100"/>
+						<param name="ondown_id" value="32300"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
-						<param name="widget_header" value="$LOCALIZE[31006]"/>
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu2Widget3Content)]"/>
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu2Widget3Label)]"/>
 						<param name="widget_target" value="videos"/>
-						<param name="list_id" value="21300"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(21300).ListItem.Dbid])"/>
-						<param name="onup_id" value="21200"/>
-						<param name="ondown_id" value="21400"/>
+						<param name="list_id" value="32300"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(31300).ListItem.Dbid])"/>
+						<param name="onup_id" value="32200"/>
+						<param name="ondown_id" value="32400"/>
 					</include>
 					<include name="WidgetListMovies">
-						<param name="content_path" value="special://skin/playlists/recentlywatched_movies.xsp"/>
-						<param name="widget_header" value="Recently watched movies"/>
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu2Widget4Content)]"/>
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu2Widget4Label)]"/>
 						<param name="widget_target" value="videos"/>
-						<param name="list_id" value="21400"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(21400).ListItem.Dbid])"/>
-						<param name="onup_id" value="21300"/>
+						<param name="list_id" value="32400"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(32400).ListItem.Dbid])"/>
+						<param name="onup_id" value="32300"/>
 						<param name="ondown_id" value="20001"/>
 					</include>
 					<include name="ImageWidgetHeader">
@@ -579,27 +680,13 @@
 						<param name="text_label" value="$LOCALIZE[31104]" />
 						<param name="button_label" value="$LOCALIZE[31110]" />
 						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-						<param name="button_id" value="21500"/>
+						<param name="button_id" value="32500"/>
 						<param name="visible" value="!Library.HasContent(movies)"/>
 						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
 					</include>
 				</control>
 			</control>
-			
-			<!--These are two dummy lists so that the number of movies and the number of watched movies can display under label2 of the main menu -->
-			<!--These are being used because the $INFO[Container(5999).TotalWatched] infolabel does not seem to be working. http://forum.kodi.tv/showthread.php?tid=266154 -->
-			<control type="list" id="21998" description="RecentMoviesDummy">
-				<onfocus>Control.SetFocus(9000)</onfocus>
-				<visible allowhiddenfocus="true">false</visible>
-				<itemlayout></itemlayout>
-				<content target="video">special://skin/playlists/allwatched_movies.xsp</content>
-			</control>
-			<control type="list" id="21999" description="WatchedMoviesDummy">
-				<onfocus>Control.SetFocus(9000)</onfocus>
-				<visible allowhiddenfocus="true">false</visible>
-				<itemlayout></itemlayout>
-				<content target="video">special://skin/playlists/movies.xsp</content>
-			</control>	
+	
 <!--Kids Movies-->
 			<control type="group" id="16000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),kidsmovies)</visible>
@@ -954,6 +1041,7 @@
 					</include>
 				</control>
 			</control>
+		<!-- Addons -->
 			<control type="group" id="8000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),addons)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -1065,6 +1153,108 @@
 					</include>
 				</control>
 			</control>
+		<!-- Custom3 -->
+			<control type="group" id="33000">
+				<visible>Stringcompare(Container(9000).ListItem.Property(id),custom3)</visible>
+				<include>Visible_Right_Delayed</include>
+				<control type="button" id="33888">
+					<width>1</width>
+					<height>1</height>
+					<label>-</label>
+					<onfocus>SetFocus(33001)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(21200).NumItems,0)">SetFocus(33200)</onfocus>
+					<onfocus condition="IntegerGreaterThan(Container(21100).NumItems,0)">SetFocus(33100)</onfocus>
+					<onclick>noop</onclick>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="grouplist" id="33001">
+					<orientation>vertical</orientation>
+					<height>922</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemgap>-2</itemgap>
+					<include name="SubMenu">
+						<param name="list_id" value="33900"/>
+						<param name="ondown_id" value="33100"/>
+						<param name="visible" value="Library.HasContent(movies)"/>
+						<param name="item1_onclick" value="ActivateWindow(videos,RecentlyAddedMovies,return)" />
+						<param name="item1_icon" value="recentlyadded.png" />
+						<param name="item1_label" value="shit dog" />
+						<param name="item2_onclick" value="ActivateWindow(videos,MovieYears,return)" />
+						<param name="item2_icon" value="years.png" />
+						<param name="item2_label" value="$LOCALIZE[652]" />
+						<param name="item3_onclick" value="ActivateWindow(videos,MovieSets,return)" />
+						<param name="item3_icon" value="sets.png" />
+						<param name="item3_label" value="$LOCALIZE[31075]" />
+						<param name="item4_onclick" value="ActivateWindow(videos,MovieGenres,return)" />
+						<param name="item4_icon" value="genres.png" />
+						<param name="item4_label" value="$LOCALIZE[135]" />
+						<param name="item5_onclick" value="ActivateWindow(videos,MovieActors,return)" />
+						<param name="item5_icon" value="actors.png" />
+						<param name="item5_label" value="$LOCALIZE[344]" />
+						<param name="item6_onclick" value="ActivateWindow(videos,MovieTags,return)" />
+						<param name="item6_icon" value="tags.png" />
+						<param name="item6_label" value="$LOCALIZE[20459]" />
+						<param name="item7_onclick" value="ActivateWindow(videos,library://video/movies/,return)" />
+						<param name="item7_icon" value="media.png" />
+						<param name="item7_label" value="$LOCALIZE[31074]" />
+						<param name="item8_onclick" value="UpdateLibrary(video)" />
+						<param name="item8_icon" value="updatelibrary.png" />
+						<param name="item8_label" value="$LOCALIZE[653]" />
+					</include>
+					<include name="WidgetListMovies">
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu3Sub1Content)]"/>
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu3Widget1Label)]"/>
+						<param name="widget_target" value="videos"/>
+						<param name="list_id" value="33100"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(33100).ListItem.Dbid])"/>
+						<param name="onup_id" value="33900"/>
+						<param name="ondown_id" value="33200"/>
+					</include>
+					<include name="WidgetListMovies">
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu3Widget2Content)]"/>  
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu3Widget2Label)]"/>
+						<param name="widget_target" value="videos"/>
+						<param name="list_id" value="33200"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(33200).ListItem.Dbid])"/>
+						<param name="onup_id" value="33100"/>
+						<param name="ondown_id" value="33300"/>
+					</include>
+					<include name="WidgetListMovies">
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu3Widget3Content)]"/>
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu3Widget3Label)]"/>
+						<param name="widget_target" value="videos"/>
+						<param name="list_id" value="33300"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(33300).ListItem.Dbid])"/>
+						<param name="onup_id" value="33200"/>
+						<param name="ondown_id" value="33400"/>
+					</include>
+					<include name="WidgetListMovies">
+						<param name="content_path" value="$INFO[Skin.String(CustomMenu3Widget4Content)]"/>
+						<param name="widget_header" value="$INFO[Skin.String(CustomMenu3Widget4Label)]"/>
+						<param name="widget_target" value="videos"/>
+						<param name="list_id" value="33400"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(33400).ListItem.Dbid])"/>
+						<param name="onup_id" value="33300"/>
+						<param name="ondown_id" value="20001"/>
+					</include>
+					<include name="ImageWidgetHeader">
+						<param name="widget_header" value="$LOCALIZE[342]" />
+						<param name="visible" value="!Library.HasContent(movies)"/>
+					</include>
+					<include name="ImageWidget">
+						<param name="image_path" value="special://skin/extras/home-images/movie.jpg"/>
+						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="button_label" value="$LOCALIZE[31110]" />
+						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+						<param name="button_id" value="33500"/>
+						<param name="visible" value="!Library.HasContent(movies)"/>
+						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
+					</include>
+				</control>
+			</control>
+			
+		<!--Videos-->
 			<control type="group" id="11000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),videos)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -1509,13 +1699,15 @@
 					<pagecontrol>70</pagecontrol>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),home) + Control.IsVisible(14000)">14000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),recommended) + Control.IsVisible(18000)">18000</onright>
+					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),custom1) + Control.IsVisible(31000)">31000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),movies) + Control.IsVisible(5000)">5000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),tv) + Control.IsVisible(6000)">6000</onright>
-					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),custom1) + Control.IsVisible(21000)">21000</onright>
+					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),custom2) + Control.IsVisible(32000)">32000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),kidsmovies) + Control.IsVisible(16000)">16000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),kidstv) + Control.IsVisible(17000)">17000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),music) + Control.IsVisible(7000)">7000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),addons) + Control.IsVisible(8000)">8000</onright>
+					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),custom3) + Control.IsVisible(33000)">33000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),videos) + Control.IsVisible(11000)">11000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),livetv) + Control.IsVisible(12000)">12000</onright>
 					<onright condition="Stringcompare(Container(9000).ListItem.Property(id),radio) + Control.IsVisible(13000)">13000</onright>
@@ -1657,6 +1849,14 @@
 							<visible>!Skin.HasSetting(HomeMenuNoRecommendButton)</visible>
 						</item>
 						<item>
+							<label>$INFO[Skin.String(CustomMenu1Label)]</label>
+							<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,$INFO[Skin.String(CustomMenu1Action)],return)</onclick>
+							<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,Files,return)</onclick>
+							<thumb fallback="icons/home/videos.png">$INFO[Skin.String(CustomMenu1Image)]</thumb>
+							<property name="id">custom1</property>
+							<visible>!Skin.HasSetting(HomeMenuNoCustom1)</visible>
+						</item>	
+						<item>
 							<label>$LOCALIZE[342]</label>
 							<label2>$LOCALIZE[16102]: $INFO[Container(5998).NumItems]$INFO[Container(5999).NumItems, / ]</label2>
 							<!--<label2>$LOCALIZE[16102]: $INFO[Container(5999).TotalWatched]$INFO[Container(5999).NumItems, / ]</label2>-->
@@ -1678,13 +1878,12 @@
 							<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
 						</item>
 						<item>
-							<label>Custom1</label>
-							<label2>$LOCALIZE[16102]: $INFO[Container(5998).NumItems]$INFO[Container(5999).NumItems, / ]</label2>
-							<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,special://skin/playlists/movies.xsp,return)</onclick>
+							<label>$INFO[Skin.String(CustomMenu2Label)]</label>
+							<onclick condition="!Skin.HasSetting(HomeMenuNoCustom2)">ActivateWindow(Videos,$INFO[Skin.String(CustomMenu2Action)],return)</onclick>
 							<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,Files,return)</onclick>
-							<thumb>icons/home/movies.png</thumb>
-							<property name="id">movies</property>
-							<visible>!Skin.HasSetting(HomeMenuNoCustom1)</visible>
+							<thumb fallback="icons/home/videos.png">$INFO[Skin.String(CustomMenu2Image)]</thumb>
+							<property name="id">custom2</property>
+							<visible>!Skin.HasSetting(HomeMenuNoCustom2)</visible>
 						</item>	
 						<item>
 							<label>Kids $LOCALIZE[342]</label>
@@ -1705,7 +1904,6 @@
 							<property name="id">kidstv</property>
 							<visible>!Skin.HasSetting(HomeMenuNoKidsTVShowButton)</visible>
 						</item>
-						
 						<item>
 							<label>$LOCALIZE[2]</label>
 							<label2>$LOCALIZE[133]: $INFO[Window(Home).Property(Music.ArtistsCount)]</label2>
@@ -1734,6 +1932,14 @@
 							<thumb>icons/home/addons.png</thumb>
 							<property name="id">addons</property>
 							<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						</item>
+						<item>
+							<label>$INFO[Skin.String(CustomMenu3Label)]</label>
+							<onclick condition="!Skin.HasSetting(HomeMenuNoCustom2)">ActivateWindow(Videos,$INFO[Skin.String(CustomMenu3Action)],return)</onclick>
+							<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,Files,return)</onclick>
+							<thumb fallback="icons/home/videos.png">$INFO[Skin.String(CustomMenu3Image)]</thumb>
+							<property name="id">custom3</property>
+							<visible>!Skin.HasSetting(HomeMenuNoCustom3)</visible>
 						</item>
 						<item>
 							<label>$LOCALIZE[1]</label>
@@ -1766,40 +1972,64 @@
 				<top>878</top>
 				<onup>SetFocus(9000,99)</onup>
 				<onup>9000</onup>
-				<ondown>14200</ondown>
+				<ondown>800</ondown>
 				<onright>2000</onright>
 				<include name="BottomMainMenuItem">
-					<param name="control_id" value="801" />
-					<param name="onclick" value="ActivateWindow(playercontrols)" />
-					<param name="icon" value="icons/remote.png" />
+					<param name="control_id" value="701" />
+					<param name="onclick" value="ActivateWindow(filemanager)" />
+					<param name="icon" value="icons/filemanager.png" />
 				</include>
 				<include name="BottomMainMenuItem">
-					<param name="control_id" value="802" />
+					<param name="control_id" value="702" />
 					<param name="onclick" value="ActivateWindow(settings)" />
 					<param name="icon" value="icons/settings.png" />
 				</include>
 				<include name="BottomMainMenuItem">
-					<param name="control_id" value="803" />
+					<param name="control_id" value="703" />
 					<param name="onclick" value="ActivateWindow(favourites)" />
 					<param name="icon" value="icons/favourites.png" />
 				</include>
 				<include name="BottomMainMenuItem">
-					<param name="control_id" value="804" />
+					<param name="control_id" value="704" />
 					<param name="onclick" value="ActivateWindow(shutdownmenu)" />
 					<param name="icon" value="icons/power.png" />
 				</include>
 				<!--<include name="BottomMainMenuItem">
-					<param name="control_id" value="805" />
-					<param name="onclick" value="ActivateWindow(filemanager)" />
-					<param name="icon" value="icons/filemanager.png" />
+					<param name="control_id" value="705" />
+					<param name="onclick" value="ActivateWindow(playercontrols)" />
+					<param name="icon" value="icons/remote.png" />
 				</include>-->
 			</control>
 		</control>
-		<control type="radiobutton" id="14200">
+		<control type="grouplist" id="800">
+			<orientation>horizontal</orientation>
+			<top>988</top>
+			<itemgap>-17</itemgap>
+			<left>36</left>
+			<!--<width>210</width>-->
+			<height>95</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<onup>700</onup>
+			<ondown>900</ondown>
+			<visible>Player.hasMedia</visible>
+			<include name="BottomMainMenuItem">
+				<param name="control_id" value="801" />
+				<param name="onclick" value="ActivateWindow(playercontrols)" />
+				<param name="icon" value="icons/remote.png" />
+			</include>
+			<include name="BottomMainMenuItem">
+				<param name="control_id" value="802" />
+				<param name="onclick" value="FullScreen" />
+				<param name="icon" value="icons/now-playing/fullscreen.png" />
+			</include>
+		</control>
+		
+		<!--<control type="radiobutton" id="14200">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation)">Conditional</animation>
 			<top>995</top>
 			<left>35</left>
-			<width>420</width>
+			<width>210</width>
 			<height>95</height>
 			<align>left</align>
 			<aligny>center</aligny>
@@ -1820,7 +2050,7 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<visible>Player.hasMedia</visible>
-		</control>
+		</control>-->
 		<control type="rss">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation)">Conditional</animation>
 			<left>0</left>
