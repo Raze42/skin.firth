@@ -640,7 +640,7 @@
 						<param name="widget_header" value="$INFO[Skin.String(CustomMenu2Widget1Label)]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="32100"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(31100).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(32100).ListItem.Dbid])"/>
 						<param name="onup_id" value="32900"/>
 						<param name="ondown_id" value="32200"/>
 					</include>
@@ -658,7 +658,7 @@
 						<param name="widget_header" value="$INFO[Skin.String(CustomMenu2Widget3Label)]"/>
 						<param name="widget_target" value="videos"/>
 						<param name="list_id" value="32300"/>
-						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(31300).ListItem.Dbid])"/>
+						<param name="list_oninfo" value="RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[Container(32300).ListItem.Dbid])"/>
 						<param name="onup_id" value="32200"/>
 						<param name="ondown_id" value="32400"/>
 					</include>

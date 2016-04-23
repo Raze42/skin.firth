@@ -275,6 +275,18 @@
 		<value condition="!IsEmpty(Container(18200).ListItem.Art(fanart)) + Control.HasFocus(18200)">$INFO[Container(18200).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container(18300).ListItem.Art(fanart)) + Control.HasFocus(18300)">$INFO[Container(18300).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container(18400).ListItem.Art(fanart)) + Control.HasFocus(18400)">$INFO[Container(18400).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(31100).ListItem.Art(fanart)) + Control.HasFocus(31100)">$INFO[Container(31100).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(31200).ListItem.Art(fanart)) + Control.HasFocus(31200)">$INFO[Container(31200).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(31300).ListItem.Art(fanart)) + Control.HasFocus(31300)">$INFO[Container(31300).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(32400).ListItem.Art(fanart)) + Control.HasFocus(31400)">$INFO[Container(31400).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(32100).ListItem.Art(fanart)) + Control.HasFocus(32100)">$INFO[Container(32100).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(32200).ListItem.Art(fanart)) + Control.HasFocus(32200)">$INFO[Container(32200).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(32300).ListItem.Art(fanart)) + Control.HasFocus(32300)">$INFO[Container(32300).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(32400).ListItem.Art(fanart)) + Control.HasFocus(32400)">$INFO[Container(32400).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(33100).ListItem.Art(fanart)) + Control.HasFocus(33100)">$INFO[Container(33100).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(33200).ListItem.Art(fanart)) + Control.HasFocus(33200)">$INFO[Container(33200).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(33300).ListItem.Art(fanart)) + Control.HasFocus(33300)">$INFO[Container(33300).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(33400).ListItem.Art(fanart)) + Control.HasFocus(33400)">$INFO[Container(33400).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container(15100).ListItem.Property(FanartCode)) + Control.HasFocus(15100)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15100).ListItem.Property(FanartCode)]</value>
 		<value condition="!IsEmpty(Container(15200).ListItem.Property(FanartCode)) + Control.HasFocus(15200)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15200).ListItem.Property(FanartCode)]</value>
 		<value>-</value>

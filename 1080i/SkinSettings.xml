@@ -221,7 +221,7 @@
 						<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
 					</control>
 				</control>
-				<control type="grouplist" id="630">
+				<control type="grouplist" id="629">
 					<left>442</left>
 					<top>160</top>
 					<width>1256</width>
@@ -231,6 +231,12 @@
 					<onup>610</onup>
 					<ondown>610</ondown>
 					<visible>Container(9000).HasFocus(3)</visible>
+					<control type="button" id="630">
+						<label>Smart playlist editor</label>
+						<width>1256</width>
+						<include>DefaultSettingButton</include>
+						<onclick>ActivateWindow(smartplaylisteditor)</onclick>
+					</control>			
 				<!--Custom Menu 1-->
 					<control type="radiobutton" id="631">
 						<label>Custom menu 1 enabled</label>
