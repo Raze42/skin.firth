@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: Estuary
 # Addon id: skin.estuary
-# Addon Provider: phil65, Piers
+# Addon Provider: phil65, Ichabod Fletchman
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -21,8 +21,16 @@ msgid "Now playing"
 msgstr "در حال پخش"
 
 msgctxt "#31001"
-msgid "Search"
-msgstr "جستجو"
+msgid "Search..."
+msgstr "جستجو ..."
+
+msgctxt "#31004"
+msgid "Change mode"
+msgstr "تغییر حالت"
+
+msgctxt "#31005"
+msgid "Watch as 2D"
+msgstr "تماشا بصورت دو بعدی"
 
 msgctxt "#31019"
 msgid "Forecast"
@@ -64,21 +72,9 @@ msgctxt "#31072"
 msgid "Power Options"
 msgstr "گزینه های صرفه جویی در مصرف انرژی"
 
-msgctxt "#31081"
-msgid "Album info"
-msgstr "اطلاعات آلبوم"
-
 msgctxt "#31082"
 msgid "Lyrics add-on"
 msgstr "افزونه متن ترانه"
-
-msgctxt "#31085"
-msgid "Channel Group"
-msgstr "گروه کانال ها"
-
-msgctxt "#31091"
-msgid "Download subtitles"
-msgstr "دانلود زیر نویس ها"
 
 msgctxt "#31096"
 msgid "Local subtitle available"
@@ -87,3 +83,7 @@ msgstr "زیر نویس محلی موجود"
 msgctxt "#31100"
 msgid "Shift"
 msgstr "Shift"
+
+msgctxt "#31106"
+msgid "Teletext"
+msgstr "تله تکست"

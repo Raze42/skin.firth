@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: Estuary
 # Addon id: skin.estuary
-# Addon Provider: phil65, Piers
+# Addon Provider: phil65, Ichabod Fletchman
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -16,9 +16,21 @@ msgstr ""
 "Language: mk_MK\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;\n"
 
+msgctxt "#31000"
+msgid "Now playing"
+msgstr "Сега се изведува"
+
 msgctxt "#31001"
-msgid "Search"
-msgstr "Пребарај"
+msgid "Search..."
+msgstr "Барај..."
+
+msgctxt "#31004"
+msgid "Change mode"
+msgstr "Измени начин"
+
+msgctxt "#31005"
+msgid "Watch as 2D"
+msgstr "Гледај во 2D"
 
 msgctxt "#31019"
 msgid "Forecast"
@@ -27,6 +39,10 @@ msgstr "Прогноза"
 msgctxt "#31020"
 msgid "Actions"
 msgstr "Дела"
+
+msgctxt "#31021"
+msgid "Misc options"
+msgstr "Други опции"
 
 msgctxt "#31038"
 msgid "Rewind"
@@ -43,14 +59,6 @@ msgstr "Последно ажурирање"
 msgctxt "#31072"
 msgid "Power Options"
 msgstr "Опции за напојување"
-
-msgctxt "#31081"
-msgid "Album info"
-msgstr "Податоци за албумот"
-
-msgctxt "#31085"
-msgid "Channel Group"
-msgstr "Група на канали"
 
 msgctxt "#31096"
 msgid "Local subtitle available"

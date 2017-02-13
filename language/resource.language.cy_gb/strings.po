@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: Estuary
 # Addon id: skin.estuary
-# Addon Provider: phil65, Piers
+# Addon Provider: phil65, Ichabod Fletchman
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -17,8 +17,16 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != 11) ? 2 : 3;\n"
 
 msgctxt "#31001"
-msgid "Search"
-msgstr "Chwilio"
+msgid "Search..."
+msgstr "Chwilio..."
+
+msgctxt "#31004"
+msgid "Change mode"
+msgstr "Newid modd"
+
+msgctxt "#31005"
+msgid "Watch as 2D"
+msgstr "Gwylio mewn 2D"
 
 msgctxt "#31019"
 msgid "Forecast"
@@ -43,14 +51,6 @@ msgstr "Diweddarwyd Diwethaf"
 msgctxt "#31072"
 msgid "Power Options"
 msgstr "Dewisiadau pŵer"
-
-msgctxt "#31081"
-msgid "Album info"
-msgstr "Gwybodaeth albwm"
-
-msgctxt "#31085"
-msgid "Channel Group"
-msgstr "Grŵp Sianel"
 
 msgctxt "#31096"
 msgid "Local subtitle available"

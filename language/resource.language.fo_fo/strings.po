@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: Estuary
 # Addon id: skin.estuary
-# Addon Provider: phil65, Piers
+# Addon Provider: phil65, Ichabod Fletchman
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -15,10 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fo_FO\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgctxt "#31001"
-msgid "Search"
-msgstr "Leita"
 
 msgctxt "#31019"
 msgid "Forecast"
@@ -39,14 +35,6 @@ msgstr "Seinast dagført"
 msgctxt "#31072"
 msgid "Power Options"
 msgstr "Streym stillingar"
-
-msgctxt "#31081"
-msgid "Album info"
-msgstr "Útgávu upplýsing"
-
-msgctxt "#31085"
-msgid "Channel Group"
-msgstr "Rás bólkur"
 
 msgctxt "#31100"
 msgid "Shift"
