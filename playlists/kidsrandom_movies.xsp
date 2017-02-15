@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <smartplaylist type="movies">
-    <name>Random movies</name>
+    <name>Kids Random Movies</name>
     <match>all</match>
-    <rule field="genre" operator="isnot">
+    <group>none</group>
+   	<rule field="genre" operator="is">
         <value>children</value>
-		<value>christmas</value>
     </rule>
 	<limit>25</limit>
-    <order direction="descending">random</order>
+    <order direction="ascending">random</order>
 </smartplaylist>

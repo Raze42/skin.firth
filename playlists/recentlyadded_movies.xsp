@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <smartplaylist type="movies">
-    <name>In-progress movies</name>
+    <name>Kids Recently Added Movies</name>
     <match>all</match>
-    <rule field="inprogress" operator="true" />
+    <rule field="dateadded" operator="after">
+        <value>2000-01-01</value>
+    </rule>
 	<rule field="genre" operator="isnot">
         <value>children</value>
 		<value>christmas</value>
     </rule>
-    <limit>10</limit>
-    <order direction="descending">lastplayed</order>
+    <limit>50</limit>
+    <order direction="descending">dateadded</order>
 </smartplaylist>

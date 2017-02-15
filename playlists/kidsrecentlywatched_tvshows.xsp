@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="tvshows">
+    <name>Kids Recently Watched TV Shows</name>
+    <match>all</match>
+    <!--<rule field="inprogress" operator="false" />-->
+	<rule field="genre" operator="is">
+        <value>children</value>
+    </rule>
+	    <limit>25</limit>
+    <order direction="descending">lastplayed</order>
+</smartplaylist>
