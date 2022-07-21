@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -47,6 +47,10 @@ msgstr "Filmes randômicos"
 msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Filmes por assistir"
+
+msgctxt "#31008"
+msgid "Enable category widgets"
+msgstr "Ativar categoria de widgets"
 
 msgctxt "#31009"
 msgid "Download icons"
@@ -108,9 +112,21 @@ msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Tipo de Vista"
 
+msgctxt "#31024"
+msgid "Choose rating to display for media items"
+msgstr "Escolha a classificação a exibir para itens de mídia"
+
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
 msgstr "Nenhum favorito localizado. Você pode adicionar qualquer item na visualização de mídia usando o menu de contexto."
+
+msgctxt "#31026"
+msgid "Timeshift"
+msgstr "Mudança de horário"
+
+msgctxt "#31027"
+msgid "Next aired"
+msgstr "Próxima exibição"
 
 msgctxt "#31028"
 msgid "Show fanart"
@@ -148,6 +164,10 @@ msgctxt "#31036"
 msgid "items"
 msgstr "itens"
 
+msgctxt "#31037"
+msgid "Selected track"
+msgstr "Faixa selecionada"
+
 msgctxt "#31038"
 msgid "Rewind"
 msgstr "Retroceder"
@@ -184,14 +204,6 @@ msgctxt "#31048"
 msgid "Available"
 msgstr "Disponível"
 
-msgctxt "#31050"
-msgid "Press [B]OK[/B] to stop"
-msgstr "Aperte [B]OK[/B] para parar"
-
-msgctxt "#31051"
-msgid "Toggle language"
-msgstr "Alterar língua"
-
 msgctxt "#31052"
 msgid "filtered"
 msgstr "filtrado"
@@ -201,8 +213,12 @@ msgid "Arial based"
 msgstr "Baseado na Arial"
 
 msgctxt "#31054"
-msgid "Press [B]Left[/B] to rewind, or [B]Right[/B] to fast-forward"
-msgstr "Pressione [B]Esquerda[/B] para retroceder, ou [B]Direita[/B] para avançar rapidamente"
+msgid "Press [B]Left[/B] to step back, or [B]Right[/B] to step forward"
+msgstr "Pressione [B]Esquerda[/B] para recuar ou [B]Direita[/B] para avançar"
+
+msgctxt "#31055"
+msgid "Press [B]Right[/B] to frame advance"
+msgstr "Pressione [B]Direita[/B] para avançar quadro"
 
 msgctxt "#31056"
 msgid "Go to playlist"
@@ -215,6 +231,14 @@ msgstr "Mostrar tela de login ao inicializar"
 msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Login automático ao inicializar"
+
+msgctxt "#31059"
+msgid "Select + X"
+msgstr "Selecionar + X"
+
+msgctxt "#31060"
+msgid "Select + Start"
+msgstr "Selecione + Iniciar"
 
 msgctxt "#31061"
 msgid "Main menu items"
@@ -256,6 +280,14 @@ msgctxt "#31072"
 msgid "Power Options"
 msgstr "Opções de Energia"
 
+msgctxt "#31073"
+msgid "Total length"
+msgstr "Duração total"
+
+msgctxt "#31074"
+msgid "Total duration"
+msgstr "Duração total"
+
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "Coletânea de Filmes"
@@ -283,10 +315,6 @@ msgstr "Ajustes de visualização"
 msgctxt "#31089"
 msgid "Available groups"
 msgstr "Grupos disponíveis"
-
-msgctxt "#31090"
-msgid "Search trailer"
-msgstr "Procurar trailer"
 
 msgctxt "#31092"
 msgid "Video menu"
@@ -368,10 +396,6 @@ msgctxt "#31114"
 msgid "Search YouTube"
 msgstr "Procurar no YouTube"
 
-msgctxt "#31115"
-msgid "Search TheMovieDB"
-msgstr "Procurar no TheMovieDB"
-
 msgctxt "#31116"
 msgid "Remove this main menu item"
 msgstr "Remover este item do menu principal"
@@ -390,7 +414,7 @@ msgstr "Não tens nenhum addon instalado ainda. Visite as categoria de addons at
 
 msgctxt "#31120"
 msgid "You did not set up a weather provider yet. In order to view weather information, choose a weather provider and set up your location."
-msgstr "Você não configurou um provedor de clima ainda. Para obeter informações de clima, escolha um provedor de clima e informa sua localização"
+msgstr "Você ainda não configurou um provedor de clima. Para obter informações sobre o clima, escolha um provedor de clima e informe sua localização."
 
 msgctxt "#31121"
 msgid "Set weather provider"
@@ -403,10 +427,6 @@ msgstr "Seriados não vistos"
 msgctxt "#31123"
 msgid "Same director"
 msgstr "Mesmo diretor"
-
-msgctxt "#31124"
-msgid "Show images on map"
-msgstr "Mostrar imagens no mapa"
 
 msgctxt "#31125"
 msgid "Press up for actor info"
@@ -437,12 +457,20 @@ msgid "Choose skin fanart pack"
 msgstr "Escolha o pacota de fanart da skin"
 
 msgctxt "#31132"
-msgid "min"
-msgstr "min"
+msgid "Select Program"
+msgstr "Selecionar Programa"
+
+msgctxt "#31133"
+msgid "Select Resolution"
+msgstr "Selecionar Resolução"
 
 msgctxt "#31134"
 msgid "Remaining"
 msgstr "Remanescente"
+
+msgctxt "#31135"
+msgid "Binary"
+msgstr "Binário"
 
 msgctxt "#31136"
 msgid "Click here to see latest changes..."
@@ -484,6 +512,14 @@ msgctxt "#31145"
 msgid "Search add-ons"
 msgstr "Procurar add-ons"
 
+msgctxt "#31146"
+msgid "In cinemas"
+msgstr "Nos cinemas"
+
+msgctxt "#31147"
+msgid "In cinemas soon"
+msgstr "Nos cinemas em breve"
+
 msgctxt "#31148"
 msgid "Categories"
 msgstr "Categorias"
@@ -493,16 +529,16 @@ msgid "Select genre fanart pack"
 msgstr "Selecione o pacote de fanart de gêneros"
 
 msgctxt "#31150"
-msgid "Repository"
-msgstr "Repositório"
+msgid "Origin"
+msgstr "Origem"
 
 msgctxt "#31151"
 msgid "Unwatched music videos"
-msgstr "Concertos por assistir"
+msgstr "Videoclipes a assistir"
 
 msgctxt "#31152"
 msgid "Random music videos"
-msgstr "Concertos randômicos"
+msgstr "Videoclipes aleatórios"
 
 msgctxt "#31153"
 msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
@@ -539,3 +575,35 @@ msgstr "Mostrar etiquetas de mídia"
 msgctxt "#31161"
 msgid "Numeric pad"
 msgstr "Pad numérico"
+
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "Jogue seus jogos pessoais ou faça o download de um dos muitos add-ons de jogos disponívies no repositório oficial."
+
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "Mostrar Fanart como pano de fundo"
+
+msgctxt "#31164"
+msgid "Choose kind of profile identification"
+msgstr "Escolher o tipo de identificação do perfil"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "Nome do Perfil"
+
+msgctxt "#31166"
+msgid "Profile avatar"
+msgstr "Imagem do perfil"
+
+msgctxt "#31167"
+msgid "Animate background"
+msgstr "Pano de Fundo animado"
+
+msgctxt "#31168"
+msgid "Show posters instead of thumbs for musicvideos"
+msgstr "Mostrar pôsteres ao invés de miniaturas para concertos"
+
+msgctxt "#31169"
+msgid "Artwork related settings."
+msgstr "Ajustes relacionados a artes"

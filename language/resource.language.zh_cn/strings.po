@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -47,6 +47,10 @@ msgstr "随机电影"
 msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "未观看电影"
+
+msgctxt "#31008"
+msgid "Enable category widgets"
+msgstr "启用功能区小部件"
 
 msgctxt "#31009"
 msgid "Download icons"
@@ -108,9 +112,21 @@ msgctxt "#31023"
 msgid "Viewtype"
 msgstr "视图类型"
 
+msgctxt "#31024"
+msgid "Choose rating to display for media items"
+msgstr "选择媒体项目要显示的评级"
+
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
 msgstr "未找到收藏。你可以从媒体浏览使用上下文菜单添加收藏项目。"
+
+msgctxt "#31026"
+msgid "Timeshift"
+msgstr "时光平移"
+
+msgctxt "#31027"
+msgid "Next aired"
+msgstr "下次播出"
 
 msgctxt "#31028"
 msgid "Show fanart"
@@ -148,6 +164,10 @@ msgctxt "#31036"
 msgid "items"
 msgstr "项"
 
+msgctxt "#31037"
+msgid "Selected track"
+msgstr "已选条目"
+
 msgctxt "#31038"
 msgid "Rewind"
 msgstr "回退"
@@ -184,14 +204,6 @@ msgctxt "#31048"
 msgid "Available"
 msgstr "可用"
 
-msgctxt "#31050"
-msgid "Press [B]OK[/B] to stop"
-msgstr "按 [B]确定[/B] 停止"
-
-msgctxt "#31051"
-msgid "Toggle language"
-msgstr "切换语言"
-
 msgctxt "#31052"
 msgid "filtered"
 msgstr "已筛选"
@@ -201,8 +213,12 @@ msgid "Arial based"
 msgstr "基于 Arial 字体"
 
 msgctxt "#31054"
-msgid "Press [B]Left[/B] to rewind, or [B]Right[/B] to fast-forward"
-msgstr "按 [B]左[/B] 回退，[B]右[/B] 快进"
+msgid "Press [B]Left[/B] to step back, or [B]Right[/B] to step forward"
+msgstr "按 [B]左[/B] 后退，或按 [B]右[/B] 快进"
+
+msgctxt "#31055"
+msgid "Press [B]Right[/B] to frame advance"
+msgstr "按 [B]右[/B] 以帧快进"
 
 msgctxt "#31056"
 msgid "Go to playlist"
@@ -215,6 +231,14 @@ msgstr "启动时显示登录界面"
 msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "启动时自动登录"
+
+msgctxt "#31059"
+msgid "Select + X"
+msgstr "Select + X"
+
+msgctxt "#31060"
+msgid "Select + Start"
+msgstr "Select + Start"
 
 msgctxt "#31061"
 msgid "Main menu items"
@@ -256,6 +280,14 @@ msgctxt "#31072"
 msgid "Power Options"
 msgstr "电源选项"
 
+msgctxt "#31073"
+msgid "Total length"
+msgstr "总长度"
+
+msgctxt "#31074"
+msgid "Total duration"
+msgstr "总时长"
+
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "电影集"
@@ -283,10 +315,6 @@ msgstr "可视化效果设置"
 msgctxt "#31089"
 msgid "Available groups"
 msgstr "可用组"
-
-msgctxt "#31090"
-msgid "Search trailer"
-msgstr "搜索预告片"
 
 msgctxt "#31092"
 msgid "Video menu"
@@ -368,10 +396,6 @@ msgctxt "#31114"
 msgid "Search YouTube"
 msgstr "搜索 YouTube"
 
-msgctxt "#31115"
-msgid "Search TheMovieDB"
-msgstr "搜索 TheMovieDB"
-
 msgctxt "#31116"
 msgid "Remove this main menu item"
 msgstr "删除此主菜单项"
@@ -404,10 +428,6 @@ msgctxt "#31123"
 msgid "Same director"
 msgstr "同一导演"
 
-msgctxt "#31124"
-msgid "Show images on map"
-msgstr "在地图上显示图像"
-
 msgctxt "#31125"
 msgid "Press up for actor info"
 msgstr "按“上”为演员信息"
@@ -437,12 +457,20 @@ msgid "Choose skin fanart pack"
 msgstr "选择皮肤同人画包"
 
 msgctxt "#31132"
-msgid "min"
-msgstr "分"
+msgid "Select Program"
+msgstr "选择程序"
+
+msgctxt "#31133"
+msgid "Select Resolution"
+msgstr "选择分辨率"
 
 msgctxt "#31134"
 msgid "Remaining"
 msgstr "剩余"
+
+msgctxt "#31135"
+msgid "Binary"
+msgstr "二进制"
 
 msgctxt "#31136"
 msgid "Click here to see latest changes..."
@@ -484,6 +512,14 @@ msgctxt "#31145"
 msgid "Search add-ons"
 msgstr "搜索插件"
 
+msgctxt "#31146"
+msgid "In cinemas"
+msgstr "在电影院里"
+
+msgctxt "#31147"
+msgid "In cinemas soon"
+msgstr "即将上映"
+
 msgctxt "#31148"
 msgid "Categories"
 msgstr "类别"
@@ -493,8 +529,8 @@ msgid "Select genre fanart pack"
 msgstr "选择类型同人画包"
 
 msgctxt "#31150"
-msgid "Repository"
-msgstr "库"
+msgid "Origin"
+msgstr "原始"
 
 msgctxt "#31151"
 msgid "Unwatched music videos"
@@ -539,3 +575,35 @@ msgstr "显示媒体标识"
 msgctxt "#31161"
 msgid "Numeric pad"
 msgstr "数字键盘"
+
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "玩你自己珍藏的游戏或者从官方仓库中下载游戏插件"
+
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "显示同人画背景"
+
+msgctxt "#31164"
+msgid "Choose kind of profile identification"
+msgstr "选择个人配置标识种类"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "用户配置名称"
+
+msgctxt "#31166"
+msgid "Profile avatar"
+msgstr "用户配置头像"
+
+msgctxt "#31167"
+msgid "Animate background"
+msgstr "动态背景"
+
+msgctxt "#31168"
+msgid "Show posters instead of thumbs for musicvideos"
+msgstr "对于音乐电视，显示海报而不是缩略图"
+
+msgctxt "#31169"
+msgid "Artwork related settings."
+msgstr "艺术图片相关的设置。"

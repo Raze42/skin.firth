@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -47,6 +47,10 @@ msgstr "Lukraak flieks"
 msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Ongekykte flieks"
+
+msgctxt "#31008"
+msgid "Enable category widgets"
+msgstr "Stel kategorie widget in staat"
 
 msgctxt "#31009"
 msgid "Download icons"
@@ -108,9 +112,21 @@ msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Aansigtipe"
 
+msgctxt "#31024"
+msgid "Choose rating to display for media items"
+msgstr "Kies gradering om vir media items te vertoon"
+
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
 msgstr "Geen gunstelinge gevind. Jy kan enige item vanaf media aansigte byvoeg by hierdie lys deur die konteks kieslys te gebruik."
+
+msgctxt "#31026"
+msgid "Timeshift"
+msgstr "Tydskuif"
+
+msgctxt "#31027"
+msgid "Next aired"
+msgstr "Volgende gelug"
 
 msgctxt "#31028"
 msgid "Show fanart"
@@ -148,6 +164,10 @@ msgctxt "#31036"
 msgid "items"
 msgstr "items"
 
+msgctxt "#31037"
+msgid "Selected track"
+msgstr "Gekose snit"
+
 msgctxt "#31038"
 msgid "Rewind"
 msgstr "Terugdraai"
@@ -184,14 +204,6 @@ msgctxt "#31048"
 msgid "Available"
 msgstr "Beskikbaar"
 
-msgctxt "#31050"
-msgid "Press [B]OK[/B] to stop"
-msgstr "Druk [B]OK[/B] om te stop"
-
-msgctxt "#31051"
-msgid "Toggle language"
-msgstr "Wissel taal"
-
 msgctxt "#31052"
 msgid "filtered"
 msgstr "gefilter"
@@ -201,8 +213,12 @@ msgid "Arial based"
 msgstr "Antenna gebasseer"
 
 msgctxt "#31054"
-msgid "Press [B]Left[/B] to rewind, or [B]Right[/B] to fast-forward"
-msgstr "Druk [B]Links[/B] om terug te draai, of [B]Regs[/B] vir vinnig vorentoe"
+msgid "Press [B]Left[/B] to step back, or [B]Right[/B] to step forward"
+msgstr "Druk [B]Links[/B] om terug te tree, of [B]Regs[/B] om vorentoe te trree"
+
+msgctxt "#31055"
+msgid "Press [B]Right[/B] to frame advance"
+msgstr "Druk [B]Regs[/B] vir volgende raam"
 
 msgctxt "#31056"
 msgid "Go to playlist"
@@ -215,6 +231,14 @@ msgstr "Vertoon die inteken skerm met begin"
 msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Outomatiese Inteken met begin"
+
+msgctxt "#31059"
+msgid "Select + X"
+msgstr "Kies + X"
+
+msgctxt "#31060"
+msgid "Select + Start"
+msgstr "Kies + Begin"
 
 msgctxt "#31061"
 msgid "Main menu items"
@@ -256,6 +280,14 @@ msgctxt "#31072"
 msgid "Power Options"
 msgstr "Krag Opsies"
 
+msgctxt "#31073"
+msgid "Total length"
+msgstr "Totale lengte"
+
+msgctxt "#31074"
+msgid "Total duration"
+msgstr "Totale tydsduur"
+
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "Fliek stelle"
@@ -283,10 +315,6 @@ msgstr "Visualisering verstellings"
 msgctxt "#31089"
 msgid "Available groups"
 msgstr "Beskikbare groepe"
-
-msgctxt "#31090"
-msgid "Search trailer"
-msgstr "Soek lokprent"
 
 msgctxt "#31092"
 msgid "Video menu"
@@ -368,10 +396,6 @@ msgctxt "#31114"
 msgid "Search YouTube"
 msgstr "Deursoek YouTube"
 
-msgctxt "#31115"
-msgid "Search TheMovieDB"
-msgstr "Deursoek TheMovieDB"
-
 msgctxt "#31116"
 msgid "Remove this main menu item"
 msgstr "Verwyder hierdie hoof kieslys item"
@@ -404,10 +428,6 @@ msgctxt "#31123"
 msgid "Same director"
 msgstr "Selfde direkteur"
 
-msgctxt "#31124"
-msgid "Show images on map"
-msgstr "Wys beelde op kaart"
-
 msgctxt "#31125"
 msgid "Press up for actor info"
 msgstr "Druk op vir akteur info"
@@ -437,12 +457,20 @@ msgid "Choose skin fanart pack"
 msgstr "Kies oortreksel ondersteunerkuns pak"
 
 msgctxt "#31132"
-msgid "min"
-msgstr "min"
+msgid "Select Program"
+msgstr "Selekteer program"
+
+msgctxt "#31133"
+msgid "Select Resolution"
+msgstr "Selekteer resolusie"
 
 msgctxt "#31134"
 msgid "Remaining"
 msgstr "Oorblywend"
+
+msgctxt "#31135"
+msgid "Binary"
+msgstr "Binêr"
 
 msgctxt "#31136"
 msgid "Click here to see latest changes..."
@@ -484,6 +512,14 @@ msgctxt "#31145"
 msgid "Search add-ons"
 msgstr "Deursoek byvoegsels"
 
+msgctxt "#31146"
+msgid "In cinemas"
+msgstr "In teaters"
+
+msgctxt "#31147"
+msgid "In cinemas soon"
+msgstr "Binnekort in teaters"
+
 msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategorieë"
@@ -493,8 +529,8 @@ msgid "Select genre fanart pack"
 msgstr "Kies genre ondersteunerkuns pak"
 
 msgctxt "#31150"
-msgid "Repository"
-msgstr "Stoorplek"
+msgid "Origin"
+msgstr "Oorsprong"
 
 msgctxt "#31151"
 msgid "Unwatched music videos"
@@ -539,3 +575,35 @@ msgstr "Wys media vlaggies"
 msgctxt "#31161"
 msgid "Numeric pad"
 msgstr "Nommer blok"
+
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "Speel jou persoonlike speletjies of laai een van die baie speletjie byvoegsels af vanaf die offisiële stoorplek."
+
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "Wys Ondersteunerkuns agtergrond"
+
+msgctxt "#31164"
+msgid "Choose kind of profile identification"
+msgstr "Kies tipe profiel identifikasie"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "Profiel naam"
+
+msgctxt "#31166"
+msgid "Profile avatar"
+msgstr "Profiel avatar"
+
+msgctxt "#31167"
+msgid "Animate background"
+msgstr "Animeer agtergrond"
+
+msgctxt "#31168"
+msgid "Show posters instead of thumbs for musicvideos"
+msgstr "Wys plakkate in plaas van duimnaelsketse vir musiekvideos"
+
+msgctxt "#31169"
+msgid "Artwork related settings."
+msgstr "Kunswerk verwante verstellings."

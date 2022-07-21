@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -47,6 +47,10 @@ msgstr "Random movies"
 msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Unwatched movies"
+
+msgctxt "#31008"
+msgid "Enable category widgets"
+msgstr "Enable category widgets"
 
 msgctxt "#31009"
 msgid "Download icons"
@@ -108,9 +112,21 @@ msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Viewtype"
 
+msgctxt "#31024"
+msgid "Choose rating to display for media items"
+msgstr "Choose rating to display for media items"
+
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
 msgstr "No favorites found. You can add any item from media views to this list by using the context menu."
+
+msgctxt "#31026"
+msgid "Timeshift"
+msgstr "Timeshift"
+
+msgctxt "#31027"
+msgid "Next aired"
+msgstr "Next aired"
 
 msgctxt "#31028"
 msgid "Show fanart"
@@ -119,6 +135,10 @@ msgstr "Show fanart"
 msgctxt "#31029"
 msgid "Last logged in"
 msgstr "Last logged in"
+
+msgctxt "#31030"
+msgid "System memory usage"
+msgstr "System memory usage"
 
 msgctxt "#31031"
 msgid "Version info"
@@ -143,6 +163,10 @@ msgstr "Pages"
 msgctxt "#31036"
 msgid "items"
 msgstr "items"
+
+msgctxt "#31037"
+msgid "Selected track"
+msgstr "Selected track"
 
 msgctxt "#31038"
 msgid "Rewind"
@@ -180,14 +204,6 @@ msgctxt "#31048"
 msgid "Available"
 msgstr "Available"
 
-msgctxt "#31050"
-msgid "Press [B]OK[/B] to stop"
-msgstr "Press [B]OK[/B] to stop"
-
-msgctxt "#31051"
-msgid "Toggle language"
-msgstr "Toggle language"
-
 msgctxt "#31052"
 msgid "filtered"
 msgstr "filtered"
@@ -197,8 +213,12 @@ msgid "Arial based"
 msgstr "Arial based"
 
 msgctxt "#31054"
-msgid "Press [B]Left[/B] to rewind, or [B]Right[/B] to fast-forward"
-msgstr "Press [B]Left[/B] to rewind, or [B]Right[/B] to fast-forward"
+msgid "Press [B]Left[/B] to step back, or [B]Right[/B] to step forward"
+msgstr "Press [B]Left[/B] to step back, or [B]Right[/B] to step forward"
+
+msgctxt "#31055"
+msgid "Press [B]Right[/B] to frame advance"
+msgstr "Press [B]Right[/B] to frame advance"
 
 msgctxt "#31056"
 msgid "Go to playlist"
@@ -212,9 +232,21 @@ msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Automatic Login on startup"
 
+msgctxt "#31059"
+msgid "Select + X"
+msgstr "Select + X"
+
+msgctxt "#31060"
+msgid "Select + Start"
+msgstr "Select + Start"
+
 msgctxt "#31061"
 msgid "Main menu items"
 msgstr "Main menu items"
+
+msgctxt "#31062"
+msgid "Choose weather fanart pack"
+msgstr "Choose weather fanart pack"
 
 msgctxt "#31063"
 msgid "Sections"
@@ -248,6 +280,14 @@ msgctxt "#31072"
 msgid "Power Options"
 msgstr "Power Options"
 
+msgctxt "#31073"
+msgid "Total length"
+msgstr "Total length"
+
+msgctxt "#31074"
+msgid "Total duration"
+msgstr "Total duration"
+
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "Movie sets"
@@ -276,10 +316,6 @@ msgctxt "#31089"
 msgid "Available groups"
 msgstr "Available groups"
 
-msgctxt "#31090"
-msgid "Search trailer"
-msgstr "Search trailer"
-
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Video menu"
@@ -303,6 +339,10 @@ msgstr "Channel options"
 msgctxt "#31098"
 msgid "Select your Kodi user profile[CR]to login and continue"
 msgstr "Select your Kodi user profile[CR]to login and continue"
+
+msgctxt "#31099"
+msgid "IconWall"
+msgstr "IconWall"
 
 msgctxt "#31100"
 msgid "Shift"
@@ -356,10 +396,6 @@ msgctxt "#31114"
 msgid "Search YouTube"
 msgstr "Search YouTube"
 
-msgctxt "#31115"
-msgid "Search TheMovieDB"
-msgstr "Search TheMovieDB"
-
 msgctxt "#31116"
 msgid "Remove this main menu item"
 msgstr "Remove this main menu item"
@@ -392,10 +428,6 @@ msgctxt "#31123"
 msgid "Same director"
 msgstr "Same director"
 
-msgctxt "#31124"
-msgid "Show images on map"
-msgstr "Show images on map"
-
 msgctxt "#31125"
 msgid "Press up for actor info"
 msgstr "Press up for actor info"
@@ -420,13 +452,25 @@ msgctxt "#31130"
 msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Main menu-related settings: Configure the home screen to your likings."
 
+msgctxt "#31131"
+msgid "Choose skin fanart pack"
+msgstr "Choose skin fanart pack"
+
 msgctxt "#31132"
-msgid "min"
-msgstr "min"
+msgid "Select Program"
+msgstr "Select Program"
+
+msgctxt "#31133"
+msgid "Select Resolution"
+msgstr "Select Resolution"
 
 msgctxt "#31134"
 msgid "Remaining"
 msgstr "Remaining"
+
+msgctxt "#31135"
+msgid "Binary"
+msgstr "Binary"
 
 msgctxt "#31136"
 msgid "Click here to see latest changes..."
@@ -456,6 +500,110 @@ msgctxt "#31142"
 msgid "Play speed"
 msgstr "Play speed"
 
+msgctxt "#31143"
+msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+
 msgctxt "#31144"
 msgid "Enter add-on browser"
 msgstr "Enter add-on browser"
+
+msgctxt "#31145"
+msgid "Search add-ons"
+msgstr "Search add-ons"
+
+msgctxt "#31146"
+msgid "In cinemas"
+msgstr "In theaters"
+
+msgctxt "#31147"
+msgid "In cinemas soon"
+msgstr "In theaters soon"
+
+msgctxt "#31148"
+msgid "Categories"
+msgstr "Categories"
+
+msgctxt "#31149"
+msgid "Select genre fanart pack"
+msgstr "Select genre fanart pack"
+
+msgctxt "#31150"
+msgid "Origin"
+msgstr "Origin"
+
+msgctxt "#31151"
+msgid "Unwatched music videos"
+msgstr "Unwatched music videos"
+
+msgctxt "#31152"
+msgid "Random music videos"
+msgstr "Random music videos"
+
+msgctxt "#31153"
+msgid "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
+msgstr "You do not have any add-ons of this type installed. Enter the add-on browser to download add-ons created by our community."
+
+msgctxt "#31154"
+msgid "Press OK to switch between locations"
+msgstr "Press OK to switch between locations"
+
+msgctxt "#31155"
+msgid "No bookmarks created yet."
+msgstr "No bookmarks created yet."
+
+msgctxt "#31156"
+msgid "Choose background pattern"
+msgstr "Choose background pattern"
+
+msgctxt "#31157"
+msgid "Edit categories"
+msgstr "Edit categories"
+
+msgctxt "#31158"
+msgid "Touch mode"
+msgstr "Touch mode"
+
+msgctxt "#31159"
+msgid "Artwork"
+msgstr "Artwork"
+
+msgctxt "#31160"
+msgid "Show media flags"
+msgstr "Show media flags"
+
+msgctxt "#31161"
+msgid "Numeric pad"
+msgstr "Numeric pad"
+
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "Play your personal games or download one of the many game add-ons from the official repository."
+
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "Show Fanart background"
+
+msgctxt "#31164"
+msgid "Choose kind of profile identification"
+msgstr "Choose kind of profile identification"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "Profile name"
+
+msgctxt "#31166"
+msgid "Profile avatar"
+msgstr "Profile avatar"
+
+msgctxt "#31167"
+msgid "Animate background"
+msgstr "Animate background"
+
+msgctxt "#31168"
+msgid "Show posters instead of thumbs for musicvideos"
+msgstr "Show posters instead of thumbs for musicvideos"
+
+msgctxt "#31169"
+msgid "Artwork related settings."
+msgstr "Artwork related settings."

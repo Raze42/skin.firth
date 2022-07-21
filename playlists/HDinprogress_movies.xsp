@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>In-progress movies</name>
+    <match>all</match>
+    <rule field="inprogress" operator="true" />
+	<rule field="genre" operator="isnot">
+        <value>family</value>
+        <value>children</value>
+		<value>christmas</value>
+    </rule>
+        <rule field="videoresolution" operator="greaterthan">
+        <value>2000</value>
+    </rule>
+    <limit>25</limit>
+    <order direction="descending">lastplayed</order>
+</smartplaylist>

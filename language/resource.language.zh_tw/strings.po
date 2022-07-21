@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -48,6 +48,10 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "還沒看過的電影"
 
+msgctxt "#31008"
+msgid "Enable category widgets"
+msgstr "啟用類別小工具"
+
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "下載圖示"
@@ -78,7 +82,7 @@ msgstr "最近的錄影"
 
 msgctxt "#31016"
 msgid "Recently played channels"
-msgstr "最近收聽的頻道"
+msgstr "最近收看的頻道"
 
 msgctxt "#31017"
 msgid "Rated"
@@ -108,9 +112,21 @@ msgctxt "#31023"
 msgid "Viewtype"
 msgstr "檢視模式"
 
+msgctxt "#31024"
+msgid "Choose rating to display for media items"
+msgstr "選擇欲顯示的評等類型"
+
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
 msgstr "沒有找到最愛項目。你可以使用快捷選單來將媒體檔檢視器中的物件加入此列表。"
+
+msgctxt "#31026"
+msgid "Timeshift"
+msgstr "時間平移"
+
+msgctxt "#31027"
+msgid "Next aired"
+msgstr "下期上檔"
 
 msgctxt "#31028"
 msgid "Show fanart"
@@ -148,6 +164,10 @@ msgctxt "#31036"
 msgid "items"
 msgstr "項目"
 
+msgctxt "#31037"
+msgid "Selected track"
+msgstr "選中的曲目"
+
 msgctxt "#31038"
 msgid "Rewind"
 msgstr "倒轉"
@@ -184,14 +204,6 @@ msgctxt "#31048"
 msgid "Available"
 msgstr "可用"
 
-msgctxt "#31050"
-msgid "Press [B]OK[/B] to stop"
-msgstr "按[B]OK[/B]停止"
-
-msgctxt "#31051"
-msgid "Toggle language"
-msgstr "切換語系"
-
 msgctxt "#31052"
 msgid "filtered"
 msgstr "經篩選過的"
@@ -199,10 +211,6 @@ msgstr "經篩選過的"
 msgctxt "#31053"
 msgid "Arial based"
 msgstr "基於 Arial"
-
-msgctxt "#31054"
-msgid "Press [B]Left[/B] to rewind, or [B]Right[/B] to fast-forward"
-msgstr "按[B]左[/B]倒退，或[B]右[/B]快轉"
 
 msgctxt "#31056"
 msgid "Go to playlist"
@@ -215,6 +223,14 @@ msgstr "啟動時顯示登入畫面"
 msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "啟動時自動登入"
+
+msgctxt "#31059"
+msgid "Select + X"
+msgstr "選擇 + X"
+
+msgctxt "#31060"
+msgid "Select + Start"
+msgstr "選擇 + 開始"
 
 msgctxt "#31061"
 msgid "Main menu items"
@@ -256,13 +272,21 @@ msgctxt "#31072"
 msgid "Power Options"
 msgstr "電源選項"
 
+msgctxt "#31073"
+msgid "Total length"
+msgstr "總計長度"
+
+msgctxt "#31074"
+msgid "Total duration"
+msgstr "總計時間"
+
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "電影集"
 
 msgctxt "#31079"
 msgid "Cast not available"
-msgstr "無法取得預報"
+msgstr "無法取得串流"
 
 msgctxt "#31080"
 msgid "Ends at"
@@ -283,10 +307,6 @@ msgstr "視覺效果設定"
 msgctxt "#31089"
 msgid "Available groups"
 msgstr "可用的群組"
-
-msgctxt "#31090"
-msgid "Search trailer"
-msgstr "搜尋預告片"
 
 msgctxt "#31092"
 msgid "Video menu"
@@ -318,7 +338,7 @@ msgstr "圖示牆"
 
 msgctxt "#31100"
 msgid "Shift"
-msgstr "轉換"
+msgstr "橫列海報"
 
 msgctxt "#31101"
 msgid "InfoWall"
@@ -326,7 +346,7 @@ msgstr "資訊牆"
 
 msgctxt "#31102"
 msgid "Wall"
-msgstr "牆"
+msgstr "海報牆"
 
 msgctxt "#31103"
 msgid "Enter text here..."
@@ -368,10 +388,6 @@ msgctxt "#31114"
 msgid "Search YouTube"
 msgstr "搜尋YouTube"
 
-msgctxt "#31115"
-msgid "Search TheMovieDB"
-msgstr "搜尋TheMovieDB"
-
 msgctxt "#31116"
 msgid "Remove this main menu item"
 msgstr "移除這個主選單項目"
@@ -402,11 +418,7 @@ msgstr "還沒看過的電視劇集"
 
 msgctxt "#31123"
 msgid "Same director"
-msgstr "同一個導演的作品"
-
-msgctxt "#31124"
-msgid "Show images on map"
-msgstr "在地圖上顯示影像"
+msgstr "同一位導演的作品"
 
 msgctxt "#31125"
 msgid "Press up for actor info"
@@ -437,8 +449,12 @@ msgid "Choose skin fanart pack"
 msgstr "選擇佈景主題粉絲自製圖集"
 
 msgctxt "#31132"
-msgid "min"
-msgstr "分"
+msgid "Select Program"
+msgstr "選擇程式"
+
+msgctxt "#31133"
+msgid "Select Resolution"
+msgstr "選擇解析度"
 
 msgctxt "#31134"
 msgid "Remaining"
@@ -446,7 +462,7 @@ msgstr "後結束"
 
 msgctxt "#31136"
 msgid "Click here to see latest changes..."
-msgstr "按這裡以檢視最新的變動..."
+msgstr "按這裡以檢視最新的更新項目..."
 
 msgctxt "#31137"
 msgid "PVR info"
@@ -484,6 +500,14 @@ msgctxt "#31145"
 msgid "Search add-ons"
 msgstr "搜尋附加元件"
 
+msgctxt "#31146"
+msgid "In cinemas"
+msgstr "上映中"
+
+msgctxt "#31147"
+msgid "In cinemas soon"
+msgstr "即將上映"
+
 msgctxt "#31148"
 msgid "Categories"
 msgstr "分類"
@@ -491,10 +515,6 @@ msgstr "分類"
 msgctxt "#31149"
 msgid "Select genre fanart pack"
 msgstr "選擇影音類型的粉絲自製圖集"
-
-msgctxt "#31150"
-msgid "Repository"
-msgstr "來源處"
 
 msgctxt "#31151"
 msgid "Unwatched music videos"
@@ -539,3 +559,27 @@ msgstr "顯示媒體內容標籤"
 msgctxt "#31161"
 msgid "Numeric pad"
 msgstr "數字鍵盤"
+
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "執行您收藏的遊戲，或下載官方的眾多遊戲附加元件"
+
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "顯示劇照背景"
+
+msgctxt "#31164"
+msgid "Choose kind of profile identification"
+msgstr "選擇設定檔案的標識類型"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "設定檔名稱"
+
+msgctxt "#31166"
+msgid "Profile avatar"
+msgstr "個人資料圖像"
+
+msgctxt "#31167"
+msgid "Animate background"
+msgstr "動畫背景"

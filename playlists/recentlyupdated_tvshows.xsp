@@ -6,7 +6,8 @@
         <value>2000-01-01</value>
     </rule>
 	<rule field="genre" operator="isnot">
-		<value>children</value>
+		<value>family</value>
+        <value>children</value>
     </rule>
     <limit>25</limit>
     <order direction="descending">dateadded</order>

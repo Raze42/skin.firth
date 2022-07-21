@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -47,6 +47,10 @@ msgstr "Satunnaiset elokuvat"
 msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Katsomattomat elokuvat"
+
+msgctxt "#31008"
+msgid "Enable category widgets"
+msgstr "Näytä kategoria-widgetit"
 
 msgctxt "#31009"
 msgid "Download icons"
@@ -108,9 +112,21 @@ msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Näkymä"
 
+msgctxt "#31024"
+msgid "Choose rating to display for media items"
+msgstr "Valitse näytettävän arvosanan tyyppi"
+
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
 msgstr "Suosikkeja ei löytynyt. Avaa sisältövalikko haluamasi mediatiedoston kohdalla ja valitse \"Lisää suosikkeihin\"."
+
+msgctxt "#31026"
+msgid "Timeshift"
+msgstr "Ajansiirto"
+
+msgctxt "#31027"
+msgid "Next aired"
+msgstr "Seuraava esitys"
 
 msgctxt "#31028"
 msgid "Show fanart"
@@ -148,6 +164,10 @@ msgctxt "#31036"
 msgid "items"
 msgstr "kohdetta"
 
+msgctxt "#31037"
+msgid "Selected track"
+msgstr "Valittu raita"
+
 msgctxt "#31038"
 msgid "Rewind"
 msgstr "Kelaus taaksepäin"
@@ -184,14 +204,6 @@ msgctxt "#31048"
 msgid "Available"
 msgstr "Saatavilla"
 
-msgctxt "#31050"
-msgid "Press [B]OK[/B] to stop"
-msgstr "Pysäytä painamalla [B]OK[/B]"
-
-msgctxt "#31051"
-msgid "Toggle language"
-msgstr "Tekstitysraita"
-
 msgctxt "#31052"
 msgid "filtered"
 msgstr "suodatetut"
@@ -201,8 +213,12 @@ msgid "Arial based"
 msgstr "Arial-pohjainen"
 
 msgctxt "#31054"
-msgid "Press [B]Left[/B] to rewind, or [B]Right[/B] to fast-forward"
-msgstr "Kelaa painamalla [B]Vasen[/B] tai [B]Oikea[/B]"
+msgid "Press [B]Left[/B] to step back, or [B]Right[/B] to step forward"
+msgstr "Paina [B]Vasen[/B] palataksesi takaisinpäin tai [B]Oikea[/B] edetäksesi eteenpäin"
+
+msgctxt "#31055"
+msgid "Press [B]Right[/B] to frame advance"
+msgstr "Paina [B]Oikea[/B] edetäksesi kuva kerrallaan"
 
 msgctxt "#31056"
 msgid "Go to playlist"
@@ -210,11 +226,19 @@ msgstr "Avaa toistolista"
 
 msgctxt "#31057"
 msgid "Show login screen on startup"
-msgstr "Näytä kirjautumisruutu käynnistyksessä"
+msgstr "Näytä kirjautumisruutu käynnistyksen yhteydessä"
 
 msgctxt "#31058"
 msgid "Automatic Login on startup"
-msgstr "Automaattinen kirjautuminen käynnistyksessä"
+msgstr "Automaattinen kirjautuminen"
+
+msgctxt "#31059"
+msgid "Select + X"
+msgstr "Valinta + X"
+
+msgctxt "#31060"
+msgid "Select + Start"
+msgstr "Valinta + Aloita"
 
 msgctxt "#31061"
 msgid "Main menu items"
@@ -256,6 +280,14 @@ msgctxt "#31072"
 msgid "Power Options"
 msgstr "Virta-asetukset"
 
+msgctxt "#31073"
+msgid "Total length"
+msgstr "Kokonaiskesto"
+
+msgctxt "#31074"
+msgid "Total duration"
+msgstr "Kokonaiskesto"
+
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "Elokuvaryhmät"
@@ -284,10 +316,6 @@ msgctxt "#31089"
 msgid "Available groups"
 msgstr "Kanavaryhmät"
 
-msgctxt "#31090"
-msgid "Search trailer"
-msgstr "Etsi traileria"
-
 msgctxt "#31092"
 msgid "Video menu"
 msgstr "Elokuvavalikko"
@@ -310,7 +338,7 @@ msgstr "Kanavan asetukset"
 
 msgctxt "#31098"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "Valitse Kodi-käyttäjäprofiili[CR]kirjautuaksesi sisään"
+msgstr "Valitse Kodi-käyttäjäprofiilisi[CR]ja kirjaudu sisään"
 
 msgctxt "#31099"
 msgid "IconWall"
@@ -368,10 +396,6 @@ msgctxt "#31114"
 msgid "Search YouTube"
 msgstr "Etsi YouTubesta"
 
-msgctxt "#31115"
-msgid "Search TheMovieDB"
-msgstr "Etsi TheMovieDB:stä"
-
 msgctxt "#31116"
 msgid "Remove this main menu item"
 msgstr "Poista tämä kohde päävalikosta"
@@ -404,10 +428,6 @@ msgctxt "#31123"
 msgid "Same director"
 msgstr "Ohjaajahaku"
 
-msgctxt "#31124"
-msgid "Show images on map"
-msgstr "Näytä kuvat kartalla"
-
 msgctxt "#31125"
 msgid "Press up for actor info"
 msgstr "Näyttelijätiedot (Paina YLÖS)"
@@ -437,12 +457,20 @@ msgid "Choose skin fanart pack"
 msgstr "Valitse ulkoasun taustakuvapaketti"
 
 msgctxt "#31132"
-msgid "min"
-msgstr "min"
+msgid "Select Program"
+msgstr "Valitse ohjelma"
+
+msgctxt "#31133"
+msgid "Select Resolution"
+msgstr "Valitse resoluutio"
 
 msgctxt "#31134"
 msgid "Remaining"
 msgstr "Jäljellä"
+
+msgctxt "#31135"
+msgid "Binary"
+msgstr "Binääri"
 
 msgctxt "#31136"
 msgid "Click here to see latest changes..."
@@ -484,6 +512,14 @@ msgctxt "#31145"
 msgid "Search add-ons"
 msgstr "Etsi lisäosista"
 
+msgctxt "#31146"
+msgid "In cinemas"
+msgstr "Teattereissa"
+
+msgctxt "#31147"
+msgid "In cinemas soon"
+msgstr "Tulossa pian teattereihin"
+
 msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategoriat"
@@ -493,8 +529,8 @@ msgid "Select genre fanart pack"
 msgstr "Valitse lajityyppien taustakuvapaketti"
 
 msgctxt "#31150"
-msgid "Repository"
-msgstr "Ohjelmavarasto"
+msgid "Origin"
+msgstr "Alkuperä"
 
 msgctxt "#31151"
 msgid "Unwatched music videos"
@@ -539,3 +575,35 @@ msgstr "Näytä mediakuvakkeet"
 msgctxt "#31161"
 msgid "Numeric pad"
 msgstr "Numeronäppäimistö"
+
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "Pelaa omistamiasi pelejä tai lataa pelilisäosia virallisesta ohjelmavarastosta."
+
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "Näytä fanitaide"
+
+msgctxt "#31164"
+msgid "Choose kind of profile identification"
+msgstr "Valitse näytetäänkö profiilin nimi vai kuva"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "Profiilin nimi"
+
+msgctxt "#31166"
+msgid "Profile avatar"
+msgstr "Profiilin kuva"
+
+msgctxt "#31167"
+msgid "Animate background"
+msgstr "Animoitu taustakuva"
+
+msgctxt "#31168"
+msgid "Show posters instead of thumbs for musicvideos"
+msgstr "Näytä musiikkivideoille julisteet pienkuvien sijaan"
+
+msgctxt "#31169"
+msgid "Artwork related settings."
+msgstr "Mediakuvitukseen liittyvät asetukset."

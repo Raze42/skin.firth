@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -47,6 +47,10 @@ msgstr "Atsitiktiniai filmai"
 msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Neperžiūrėti filmai"
+
+msgctxt "#31008"
+msgid "Enable category widgets"
+msgstr "Įjungti kategorijos valdiklius"
 
 msgctxt "#31009"
 msgid "Download icons"
@@ -108,9 +112,21 @@ msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Rodinio tipas"
 
+msgctxt "#31024"
+msgid "Choose rating to display for media items"
+msgstr "Pasirinkite kurį media elementų reitingą rodyti"
+
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
 msgstr "Nerasta mėgstamiausiųjų. Jūs galite pridėti bet kurį elementą iš media rodinių į šį sąrašą naudodami kontekstinį meniu."
+
+msgctxt "#31026"
+msgid "Timeshift"
+msgstr "Laiko poslinkis"
+
+msgctxt "#31027"
+msgid "Next aired"
+msgstr "Kita transliacija"
 
 msgctxt "#31028"
 msgid "Show fanart"
@@ -122,7 +138,7 @@ msgstr "Paskutinis prisijungimas"
 
 msgctxt "#31030"
 msgid "System memory usage"
-msgstr "Sistemos atminties naudojimas"
+msgstr "RAM naudojimas"
 
 msgctxt "#31031"
 msgid "Version info"
@@ -147,6 +163,10 @@ msgstr "Puslapis"
 msgctxt "#31036"
 msgid "items"
 msgstr "elem."
+
+msgctxt "#31037"
+msgid "Selected track"
+msgstr "Pasirinktas takelis"
 
 msgctxt "#31038"
 msgid "Rewind"
@@ -184,14 +204,6 @@ msgctxt "#31048"
 msgid "Available"
 msgstr "Prieinama"
 
-msgctxt "#31050"
-msgid "Press [B]OK[/B] to stop"
-msgstr "Paspauskite [B]OK[/B] norėdami sustabdyti"
-
-msgctxt "#31051"
-msgid "Toggle language"
-msgstr "Perjungti kalbą"
-
 msgctxt "#31052"
 msgid "filtered"
 msgstr "filtruota"
@@ -199,10 +211,6 @@ msgstr "filtruota"
 msgctxt "#31053"
 msgid "Arial based"
 msgstr "Arial pagrindu"
-
-msgctxt "#31054"
-msgid "Press [B]Left[/B] to rewind, or [B]Right[/B] to fast-forward"
-msgstr "Paspauskite [B]kairėn[/B] norėdami prasukti atgal ar [B]dešinėn[/B], jei norite prasukti į priekį"
 
 msgctxt "#31056"
 msgid "Go to playlist"
@@ -215,6 +223,14 @@ msgstr "Rodyti prisijungimo langą paleidžiant"
 msgctxt "#31058"
 msgid "Automatic Login on startup"
 msgstr "Automatinis prisijungimas paleidžiant"
+
+msgctxt "#31059"
+msgid "Select + X"
+msgstr "Select + X"
+
+msgctxt "#31060"
+msgid "Select + Start"
+msgstr "Select + Start"
 
 msgctxt "#31061"
 msgid "Main menu items"
@@ -256,6 +272,14 @@ msgctxt "#31072"
 msgid "Power Options"
 msgstr "Maitinimo parinktys"
 
+msgctxt "#31073"
+msgid "Total length"
+msgstr "Bendra trukmė"
+
+msgctxt "#31074"
+msgid "Total duration"
+msgstr "Bendra trukmė"
+
 msgctxt "#31075"
 msgid "Movie sets"
 msgstr "Filmų rinkiniai"
@@ -283,10 +307,6 @@ msgstr "Vizualizacijos nustatymai"
 msgctxt "#31089"
 msgid "Available groups"
 msgstr "Galimos grupės"
-
-msgctxt "#31090"
-msgid "Search trailer"
-msgstr "Ieškoti anonso"
 
 msgctxt "#31092"
 msgid "Video menu"
@@ -354,7 +374,7 @@ msgstr "Eiti į failų skyrių"
 
 msgctxt "#31111"
 msgid "View your personal pictures or download one of the many image add-ons from the official repository."
-msgstr "Peržiūrėti asmeninius paveikslėlius ar atsisiųsti vieną iš daugelio atvaizdų priedų iš oficialios saugyklos."
+msgstr "Peržiūrėkite asmeninius paveikslėlius arba atsisiųskite vieną iš daugelio atvaizdų priedų iš oficialios saugyklos."
 
 msgctxt "#31112"
 msgid "Toggle audio stream"
@@ -367,10 +387,6 @@ msgstr "Ieškoti lokalioje bibliotekoje"
 msgctxt "#31114"
 msgid "Search YouTube"
 msgstr "Ieškoti YouTube"
-
-msgctxt "#31115"
-msgid "Search TheMovieDB"
-msgstr "Ieškoti TheMovieDB"
 
 msgctxt "#31116"
 msgid "Remove this main menu item"
@@ -404,10 +420,6 @@ msgctxt "#31123"
 msgid "Same director"
 msgstr "Tas pats režisierius"
 
-msgctxt "#31124"
-msgid "Show images on map"
-msgstr "Rodyti atvaizdus žemėlapyje"
-
 msgctxt "#31125"
 msgid "Press up for actor info"
 msgstr "Paspauskite aukštyn norėdami atidaryti aktoriaus informaciją"
@@ -437,8 +449,12 @@ msgid "Choose skin fanart pack"
 msgstr "Pasirinkti teminės išvaizdos Fanart paketą"
 
 msgctxt "#31132"
-msgid "min"
-msgstr "min"
+msgid "Select Program"
+msgstr "Pasirinkite programą"
+
+msgctxt "#31133"
+msgid "Select Resolution"
+msgstr "Pasirinkti raišką"
 
 msgctxt "#31134"
 msgid "Remaining"
@@ -484,6 +500,14 @@ msgctxt "#31145"
 msgid "Search add-ons"
 msgstr "Ieškoti priedų"
 
+msgctxt "#31146"
+msgid "In cinemas"
+msgstr "Kino teatruose"
+
+msgctxt "#31147"
+msgid "In cinemas soon"
+msgstr "Netrukus kino teatruose"
+
 msgctxt "#31148"
 msgid "Categories"
 msgstr "Kategorijos"
@@ -491,10 +515,6 @@ msgstr "Kategorijos"
 msgctxt "#31149"
 msgid "Select genre fanart pack"
 msgstr "Pasirinkti žanrų Fanart paketą"
-
-msgctxt "#31150"
-msgid "Repository"
-msgstr "Saugykla"
 
 msgctxt "#31151"
 msgid "Unwatched music videos"
@@ -539,3 +559,27 @@ msgstr "Rodyti media vėliavas"
 msgctxt "#31161"
 msgid "Numeric pad"
 msgstr "Skaičių klaviatūra"
+
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "Žaiskite asmeninius žaidimus arba atsisiųskite vieną iš daugelio žaidimų priedų iš oficialios saugyklos."
+
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "Rodyti Fanart fone"
+
+msgctxt "#31164"
+msgid "Choose kind of profile identification"
+msgstr "Pasirinkite profilio identifikacijos būdą"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "Profilio vardas"
+
+msgctxt "#31166"
+msgid "Profile avatar"
+msgstr "Profilio avataras"
+
+msgctxt "#31167"
+msgid "Animate background"
+msgstr "Animuoti foną"
