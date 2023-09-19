@@ -4,14 +4,8 @@
     <match>all</match>
     <group>none</group>
    	<rule field="genre" operator="is">
-        <value>family</value>
+        <value>christmas</value>
     </rule>
-	<rule field="studio" operator="doesnotcontain">
-		<value>Disney</value>
-	</rule>
-	<rule field="genre" operator="isnot">
-		<value>christmas</value>
-	</rule>
 	<limit>25</limit>
     <order direction="ascending">random</order>
 </smartplaylist>

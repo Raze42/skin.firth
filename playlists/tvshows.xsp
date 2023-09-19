@@ -2,11 +2,11 @@
 <smartplaylist type="tvshows">
     <name>TV Shows</name>
     <match>all</match>
-	<rule field="genre" operator="isnot">
+	<!--<rule field="genre" operator="isnot">
         <value>children</value>
         <value>family</value>
         <value>christmas</value>
     </rule>
-    <limit>500</limit>
+    <limit>500</limit>-->
     <order direction="ascending">sorttitle</order>
 </smartplaylist>

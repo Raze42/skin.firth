@@ -3,7 +3,6 @@
     <name>Random movies</name>
     <match>all</match>
     <rule field="genre" operator="isnot">
-        <value>family</value>
         <value>children</value>
 		<value>christmas</value>
     </rule>

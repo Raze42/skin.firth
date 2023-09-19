@@ -2,10 +2,10 @@
 <smartplaylist type="movies">
     <name>Movies</name>
     <match>all</match>
-	<rule field="genre" operator="isnot">
+	<!--<rule field="genre" operator="isnot">
         <value>family</value>
         <value>children</value>
         <value>christmas</value>
-    </rule>
+    </rule>-->
     <order direction="ascending">sorttitle</order>
 </smartplaylist>

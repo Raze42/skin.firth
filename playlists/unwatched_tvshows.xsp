@@ -10,7 +10,7 @@
     </rule>
 	<rule field="genre" operator="isnot">
         <value>children</value>
-        <value>family</value>
+        <!--<value>family</value>-->
     </rule>
     <limit>25</limit>
     <order direction="ascending">random</order>

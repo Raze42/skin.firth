@@ -6,7 +6,6 @@
         <value>2000-01-01</value>
     </rule>
 	<rule field="genre" operator="isnot">
-        <value>family</value>
         <value>children</value>
 		<value>christmas</value>
     </rule>
